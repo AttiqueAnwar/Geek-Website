@@ -1,2 +1,2 @@
-# Week-1-Assignment
+# Geeks Websites for multiple courses selection
  
