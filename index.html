@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geeks React </title>
+    <link rel="icon" type="image/x-icon" href="/Assets/Images/logo.PNG">
+    <!--ICONS TOOLKIT  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Bootstrap Bundle-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="./Assets/css/style.css">
+</head>
+
+<body>
+    <div id="root">
+        <div class="App">
+      <!-- NAV BAR STARTS HERE -->
+      <nav class="bg-white navbar p-2 navbar-default py-2 navbar navbar-expand-lg navbar-light">
+        <div class="px-0 ps-2 container-fluid">
+          <a class="navbar-brand" href="#"><img src="/Assets/Images/geeks logo.png"></a>
+          <div class="navbar-nav navbar-right-wrap ms-auto d-lg-none nav-top-wrap d-none">
+            <div class="mt-2 me-0 dropdown nav-item">
+              <!-- NOTIFICATIONS DROPDOWN -->
+              <div class="dropdown">
+                <span class="d-flex">
+                  <a class="nav-link dropdown float-sm-right float-md-right float-lg-right float-xl-right" !important
+                    href="#" id="notifydropdown" role="button" data-toggle="dropdown">
+                    <div class='status-circle-notify'>
+                    </div>
+                    <span class="text-dark icon-notifications me-lg-1  btn btn-light btn-icon rounded-circle "
+                      id="notify">
+                      <i class="fa fa-bell-o">
+                      </i>
+                    </span>
+                  </a>
+                </span>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">
+                    <div class="d-flex justify-content-between">Notifications<i class="fa fa-gear"></i></div>
+                  </a>
+                  <hr class="dropdown-divider" role="separator">
+                  <a class="py-2 px-3 dropdown-item" href="#">
+                    <div class="d-flex align-items-center">
+                      <div class="avatar avatar-md  "><img alt="avatar" src="/Assets/Images/p6.jpg"
+                          class="avatar rounded-circle" width="40" height="40"></div>
+                      <div class="ms-3 lh-1">
+                        <h6 class="mb-0"><strong>Jenny Wilson</strong> </h6>
+                        <p class="mb-0 fs-6 text-muted">Krisitn Watsan like your comment on <br>
+                          course
+                          Javascript Introduction!</p>
+                      </div>
+                    </div>
+                  </a>
+                  <hr class="dropdown-divider" role="separator">
+                  <a class="py-2 px-3 dropdown-item" href="#">
+                    <div class="d-flex align-items-center">
+                      <div class="avatar avatar-md  "><img alt="avatar" src="/Assets/Images/p7.jpg"
+                          class="avatar rounded-circle" width="40" height="40"></div>
+                      <div class="ms-3 lh-1">
+                        <h6 class="mb-0"><strong>Rina Ray</strong></h6>
+                        <p class="mb-0 fs-6 text-muted">You earn new certificate for<br>
+                          complete the
+                          Javascript Beginner<br> course. </p>
+                      </div>
+                    </div>
+                  </a>
+                  <hr class="dropdown-divider" role="separator">
+                  <a class="py-2 px-3 dropdown-item" href="#">
+                    <div class="d-flex align-items-center">
+                      <div class="avatar avatar-md  "><img alt="avatar" src="/Assets/Images/p7.jpg"
+                          class="avatar rounded-circle" width="40" height="40"></div>
+                      <div class="ms-3 lh-1">
+                        <h6 class="mb-0"><strong>Rina Ray</strong></h6>
+                        <p class="mb-0 fs-6 text-muted">You earn new certificate for<br>
+                          complete the
+                          Javascript Beginner<br> course. </p>
+                      </div>
+                    </div>
+                  </a>
+                  <hr class="dropdown-divider" role="separator">
+                  <a class="dropdown-item" href="#">
+                    <div class="d-flex justify-content-between fs-6">See all Notifications</div>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+            <div class="dropdown nav-item">
+              <!-- PROFILE DROPDOWN -->
+              <div class="dropdown">
+                <a class="nav-link dropdown float-sm-right float-md-right float-lg-right float-xl-right" href="#"
+                  id="navbarDropdown" role="button" data-toggle="dropdown">
+                  <img src="./Assets/Images/p1.jpg" class="avatar rounded-circle" width="40" height="40" alt="">
+
+                </a>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                  <a class="py-2 px-3 dropdown-item" href="#">
+                    <div class="d-flex align-items-center">
+                      <div class="avatar avatar-md avatar-indicators2 avatar-online"><img alt="avatar"
+                          src="/Assets/Images/p1.jpg" class="avatar rounded-circle" width="40" height="40"></div>
+                      <div class="ms-3 lh-1">
+                        <h6 class="mb-0">Annette Black</h6>
+                        <p class="mb-0 fs-6 text-muted">annette@geeksui.com</p>
+                      </div>
+                    </div>
+                  </a>
+                  <hr class="dropdown-divider" role="separator">
+                  <a class="dropdown-item" href="#"><i class="fa fa-user me-2"></i>Profile </a>
+                  <a class="dropdown-item" href="#"><i class="fa fa-star me-2"></i>Subscription</a>
+                  <a class="dropdown-item" href="#"><i class="fa fa-gear me-2"></i>Settings</a>
+                  <hr class="dropdown-divider" role="separator">
+                  <a class="dropdown-item" href="#"><i class="fa fa-power-off me-2"></i>Signout</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--TOGGLE DROPDOWN ON SMALL SCREENS -->
+          <div class="d-flex">
+            <div class="d-lg-none d-md-block">
+              <span class="d-flex">
+                <div class="mt-2 me-0 dropdown nav-item">
+                  <a id="dropdownNotification" aria-expanded="false" role="button"
+                    class="text-dark icon-notifications me-lg-1  btn btn-white btn-icon rounded-circle indicator indicator-primary text-muted dt nav-link d-flex justify-content-center align-items-center"
+                    tabindex="0" href="#">
+                    <i class="fa fa-bell-o"></i>
+                  </a>
+                  <!-- NOTIFICATIONS DROPDOWN -->
+                  <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">
+                      <div class="d-flex justify-content-between">Notifications<i class="fa fa-gear"></i></div>
+                    </a>
+                    <hr class="dropdown-divider" role="separator">
+                    <a class="py-2 px-3 dropdown-item" href="#">
+                      <div class="d-flex align-items-center">
+                        <div class="avatar avatar-md  "><img alt="avatar" src="/Assets/Images/p6.jpg"
+                            class="avatar rounded-circle" width="40" height="40"></div>
+                        <div class="ms-3 lh-1">
+                          <h6 class="mb-0"><strong>Jenny Wilson</strong> </h6>
+                          <p class="mb-0 fs-6 text-muted">Krisitn Watsan like your comment on
+                            <br> course
+                            Javascript Introduction!
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                    <hr class="dropdown-divider" role="separator">
+                    <a class="py-2 px-3 dropdown-item" href="#">
+                      <div class="d-flex align-items-center">
+                        <div class="avatar avatar-md  "><img alt="avatar" src="/Assets/Images/p7.jpg"
+                            class="avatar rounded-circle" width="40" height="40"></div>
+                        <div class="ms-3 lh-1">
+                          <h6 class="mb-0"><strong>Rina Ray</strong></h6>
+                          <p class="mb-0 fs-6 text-muted">You earn new certificate for<br>
+                            complete the
+                            Javascript Beginner<br> course. </p>
+                        </div>
+                      </div>
+                    </a>
+                    <hr class="dropdown-divider" role="separator">
+                    <a class="py-2 px-3 dropdown-item" href="#">
+                      <div class="d-flex align-items-center">
+                        <div class="avatar avatar-md  "><img alt="avatar" src="/Assets/Images/p7.jpg"
+                            class="avatar rounded-circle" width="40" height="40"></div>
+                        <div class="ms-3 lh-1">
+                          <h6 class="mb-0"><strong>Rina Ray</strong></h6>
+                          <p class="mb-0 fs-6 text-muted">You earn new certificate for<br>
+                            complete the
+                            Javascript Beginner<br> course. </p>
+                        </div>
+                      </div>
+                    </a>
+                    <hr class="dropdown-divider" role="separator">
+                    <a class="dropdown-item" href="#">
+                      <div class="d-flex justify-content-between fs-6">See all Notifications</div>
+                    </a>
+                  </div>
+                </div>
+                <div class="dropdown nav-item">
+                  <a id="dropdownUser" aria-expanded="false" role="button"
+                    class="rounded-circle border-bottom-0 dt nav-link" tabindex="0" href="#">
+                    <div class="avatar avatar-md avatar-indicators avatar-indicators">
+                      <img alt="avatar" src="/Assets/Images/p1.jpg" class="rounded-circle" width="40" height="40">
+                    </div>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <a class="py-2 px-3 dropdown-item" href="#">
+                      <div class="d-flex align-items-center">
+                        <div class="avatar avatar-md avatar-indicators2 avatar-online"><img alt="avatar"
+                            src="/Assets/Images/p1.jpg" class="avatar rounded-circle" width="40" height="40"></div>
+                        <div class="ms-3 lh-1">
+                          <h6 class="mb-0">Annette Black</h6>
+                          <p class="mb-0 fs-6 text-muted">annette@geeksui.com</p>
+                        </div>
+                      </div>
+                    </a>
+                    <hr class="dropdown-divider" role="separator">
+                    <a class="dropdown-item" href="#"><i class="fa fa-user me-2"></i>Profile </a>
+                    <a class="dropdown-item" href="#"><i class="fa fa-star me-2"></i>Subscription</a>
+                    <a class="dropdown-item" href="#"><i class="fa fa-gear me-2"></i>Settings</a>
+                    <hr class="dropdown-divider" role="separator">
+                    <a class="dropdown-item" href="#"><i class="fa fa-power-off me-2"></i>Signout</a>
+                  </div>
+                </div>
+              </span>
+            </div>
+            <button aria-controls="basic-navbar-nav" type="button" aria-label="toggle navigation"
+              class="navbar-toggler collapsed" data-bs-target="#basic-navbar-nav" data-bs-toggle="collapse"
+              aria-controls="basic-navbar-nav" aria-expanded="false">
+
+              <span class="navbar-toggler-icon mt-0"></span>
+            </button>
+          </div>
+          <div class="navbar-collapse collapse" id="basic-navbar-nav">
+            <div class="navbar-nav">
+              <!--Browse class-->
+              <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                  Browse
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item btn disabled" href="#">Browse</a>
+                  <a class="dropdown-item" href="#">Design</a>
+                  <a class="dropdown-item" href="#">Mobile App</a>
+                  <a class="dropdown-item" href="#">IT Software</a>
+                  <a class="dropdown-item" href="#">Marketing</a>
+                  <a class="dropdown-item" href="#">Music</a>
+                  <a class="dropdown-item" href="#">Life Style</a>
+                  <a class="dropdown-item" href="#">Buisness</a>
+                  <a class="dropdown-item" href="#">Photography</a>
+                </div>
+              </div>
+              <!--Landings class-->
+              <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                  Landings
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item btn disabled" href="#">Landings</a>
+                  <a class="dropdown-item" href="#">Courses</a>
+                  <a class="dropdown-item" href="#">Lead Courses</a>
+                  <a class="dropdown-item" href="#">Request Access</a>
+                  <a class="dropdown-item" href="#">Saas</a>
+                </div>
+              </div>
+              <!--Pages class-->
+              <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                  Pages
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item btn disabled" href="#">Pages</a>
+                  <a class="dropdown-item" href="#">Courses</a>
+                  <a class="dropdown-item" href="#">Paths</a>
+                  <a class="dropdown-item" href="#">Blog</a>
+                  <a class="dropdown-item" href="#">Career</a>
+                  <a class="dropdown-item" href="#">Speciality</a>
+                  <hr>
+                  <a class="dropdown-item" href="#">About</a>
+                  <a class="dropdown-item" href="#">Help Center <span class="badge bg-primary">New
+                    </span>
+                  </a>
+                  <a class="dropdown-item" href="#">Pricing</a>
+                  <a class="dropdown-item" href="#">Compare Plan</a>
+                  <a class="dropdown-item" href="#">Contact</a>
+                </div>
+              </div>
+              <!--Accounts class-->
+              <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                  Accounts
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item btn disabled" href="#">Accounts</a>
+                  <a class="dropdown-item" href="#">Instructor</a>
+                  <a class="dropdown-item" href="#">Students</a>
+                  <a class="dropdown-item" href="#">Admin</a>
+                  <hr>
+                  <a class="dropdown-item" href="#">Sign In</a>
+                  <a class="dropdown-item" href="#">Sign Up</a>
+                  <a class="dropdown-item" href="#">Forgot Password</a>
+                  <a class="dropdown-item" href="#">Edit Profile</a>
+                  <a class="dropdown-item" href="#">Security</a>
+                  <a class="dropdown-item" href="#">Social Profiles</a>
+                  <a class="dropdown-item" href="#">Notifications</a>
+                  <a class="dropdown-item" href="#">Privacy Settings</a>
+                  <a class="dropdown-item" href="#">Delete Profile</a>
+                  <a class="dropdown-item" href="#">Linked Accounts</a>
+                </div>
+              </div>
+              <!--Dots Dropdown-->
+              <div class="nav-item dropdown">
+                <a class=" nav-link dropdown lh-1" href="#" id="navbarDropdown" data-toggle="dropdown">
+                  <b>...</b>
+                </a>
+                <div class="dropdown-menu">
+                  <a class="py-2 px-3 dropdown-item" href="#">
+                    <div class="d-flex align-items-center">
+                      <i class="fa fa-file-text-o fs-5 text-primary"></i>
+                      <div class="ms-3 lh-3">
+                        <h6 class="mb-0">Documentations</h6>
+                        <p class="mb-0 fs-6">Browse all the Documentations</p>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="py-2 px-3 dropdown-item" href="#">
+                    <div class="d-flex align-items-center">
+                      <i class="fa fa-file-archive-o fs-5 text-primary"></i>
+                      <div class="ms-3 lh-3">
+                        <h6 class="mb-0">Changelog v1.4.0</h6>
+                        <p class="mb-0 fs-6">See Whats's new</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between w-100">
+              <!-- Search Form -->
+              <form class="mt-3 mt-lg-0 ms-lg-4 d-flex align-items-center">
+                <input placeholder="Search Courses" type="Search" id="formSearch" class=" form-control">
+                <span class="position-absolute search icon ps-3">
+                  <i class="fa fa-search"></i>
+                </span>
+              </form>
+              <div class="d-none d-lg-block d-sm-none">
+                <span class="d-flex">
+                  <div class="mt-2 me-0 dropdown nav-item">
+                    <a id="dropdownNotification" aria-expanded="false" role="button"
+                      class="text-dark icon-notifications me-lg-1  btn btn-white btn-icon rounded-circle indicator indicator-primary text-muted dt nav-link d-flex justify-content-center align-items-center"
+                      tabindex="0" href="#">
+                      <i class="fa fa-bell-o"></i>
+                    </a>
+                    </a>
+                    <!-- NOTIFICATIONS Menu -->
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">
+                        <div class="d-flex justify-content-between">Notifications<i class="fa fa-gear"></i></div>
+                      </a>
+                      <hr class="dropdown-divider" role="separator">
+                      <a class="py-2 px-3 dropdown-item" href="#">
+                        <div class="d-flex align-items-center">
+                          <div class="avatar avatar-md  "><img alt="avatar" src="/Assets/Images/p6.jpg"
+                              class="avatar rounded-circle" width="40" height="40"></div>
+                          <div class="ms-3 lh-1">
+                            <h6 class="mb-0"><strong>Jenny Wilson</strong> </h6>
+                            <p class="mb-0 fs-6 text-muted">Krisitn Watsan like your comment
+                              on
+                              <br> course
+                              Javascript Introduction!
+                            </p>
+                          </div>
+                        </div>
+                      </a>
+                      <hr class="dropdown-divider" role="separator">
+                      <a class="py-2 px-3 dropdown-item" href="#">
+                        <div class="d-flex align-items-center">
+                          <div class="avatar avatar-md  "><img alt="avatar" src="/Assets/Images/p7.jpg"
+                              class="avatar rounded-circle" width="40" height="40"></div>
+                          <div class="ms-3 lh-1">
+                            <h6 class="mb-0"><strong>Rina Ray</strong></h6>
+                            <p class="mb-0 fs-6 text-muted">You earn new certificate for<br>
+                              complete the
+                              Javascript Beginner<br> course. </p>
+                          </div>
+                        </div>
+                      </a>
+                      <hr class="dropdown-divider" role="separator">
+                      <a class="py-2 px-3 dropdown-item" href="#">
+                        <div class="d-flex align-items-center">
+                          <div class="avatar avatar-md  "><img alt="avatar" src="/Assets/Images/p7.jpg"
+                              class="avatar rounded-circle" width="40" height="40"></div>
+                          <div class="ms-3 lh-1">
+                            <h6 class="mb-0"><strong>Rina Ray</strong></h6>
+                            <p class="mb-0 fs-6 text-muted">You earn new certificate for<br>
+                              complete the
+                              Javascript Beginner<br> course. </p>
+                          </div>
+                        </div>
+                      </a>
+                      <hr class="dropdown-divider" role="separator">
+                      <a class="dropdown-item" href="#">
+                        <div class="d-flex justify-content-between fs-6">See all Notifications
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <!-- Profile Menu -->
+                  <div class="dropdown nav-item">
+                    <a id="dropdownUser" aria-expanded="false" role="button"
+                      class="rounded-circle border-bottom-0 dt nav-link" tabindex="0" href="#">
+                      <div class="avatar avatar-md avatar-indicators avatar-indicators">
+                        <img alt="avatar" src="/Assets/Images/p1.jpg" class="rounded-circle" width="40" height="40">
+                      </div>
+                    </a>
+
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                      <a class="py-2 px-3 dropdown-item" href="#">
+                        <div class="d-flex align-items-center">
+                          <div class="avatar avatar-md avatar-indicators2 avatar-online"><img alt="avatar"
+                              src="/Assets/Images/p1.jpg" class="avatar rounded-circle" width="40" height="40"></div>
+                          <div class="ms-3 lh-1">
+                            <h6 class="mb-0">Annette Black</h6>
+                            <p class="mb-0 fs-6 text-muted">annette@geeksui.com</p>
+                          </div>
+                        </div>
+                      </a>
+                      <hr class="dropdown-divider" role="separator">
+                      <a class="dropdown-item" href="#"><i class="fa fa-user me-2"></i>Profile
+                      </a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-star me-2"></i>Subscription</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-gear me-2"></i>Settings</a>
+                      <hr class="dropdown-divider" role="separator">
+                      <a class="dropdown-item" href="#"><i class="fa fa-power-off me-2"></i>Signout</a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </nav>
+            <!--HEADER STARTS-->
+            <div class="bg-primary">
+
+                <div class="container">
+                    <div class="align-items-center g-0 row">
+                        <div class="col-xl-5 col-lg-6 col-md-12">
+                            <div class="py-5 py-lg-0">
+                                <h1 class="text-white display-6 fw-bold">Welcome to Geeks UI Learning Application</h1>
+                                <p class="text-white-50 mb-4 lead">Hand-picked Instructor and expertly crafted courses,
+                                    designed for the modern students and entrepreneur.</p>
+                                    <a class="btn btn-success"
+                                    href="/marketing/courses/course-filter-page/">Browse Courses</a> 
+                                    <a
+                                    class="btn btn-light" href="/authentication/sign-in/">Are You Instructor?</a>
+                            </div>
+                        </div>
+                        <div class="text-lg-end text-center col-xl-7 col-lg-6 col-md-12">
+                            <img src="/Assets/Images/image1.png" alt="" class="img-fluid"></div>
+                    </div>
+                </div>
+            </div>
+        <!--BELOW HEADER CONTENT-->
+        <div class="bg-white py-4 shadow-sm">
+            <div class="container">
+                <div class="align-items-center g-0 row">
+                    <div class="mb-lg-0 mb-xs-4 mb-lg-4 mb-md-4 mb-sm-4 col-xl-4 col-lg-4 col-md-6">
+                        <div class="d-flex align-items-center">
+                            <span class="icon-shape icon-lg bg-light-warning rounded-circle text-center text-dark-warning fs-6" id="text">
+                                <i class="fa fa-video-camera"></i>
+                            </span>
+                            <div class="ms-3">
+                                <h4 class="mb-0" id="headerContent">30,000 online courses</h4>
+                                <p class="mb-0">Enjoy a variety of fresh topics</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-lg-0 mb-xs-4 mb-lg-4 mb-md-4 mb-sm-4 col-xl-4 col-lg-4 col-md-6">
+                        <div class="d-flex align-items-center">
+                            <span class="icon-shape icon-lg bg-light-warning rounded-circle text-center text-dark-warning fs-6" id="text">
+                                <i class="fa fa-user-o"></i>
+                            </span>
+                            <div class="ms-3">
+                                <h4 class="mb-0" id="headerContent">Expert instruction</h4>
+                                <p class="mb-0">Find the right instructor for
+                                    you</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-lg-0 mb-xs-4 mb-lg-4 mb-md-4 mb-sm-4 col-xl-4 col-lg-4 col-md-6">
+                        <div class="d-flex align-items-center">
+                            <span class="icon-shape icon-lg bg-light-warning rounded-circle text-center text-dark-warning fs-6" id="text">
+                                <i class="fa fa-clock-o"></i>
+                            </span>
+                            <div class="ms-3">
+                                <h4 class="mb-0" id="headerContent">Lifetime access</h4>
+                                <p class="mb-0">Learn on your schedule</p>
+                            </div>
+                        </div>
+                    </div>
+              
+                </div>
+            </div>
+        </div>
+
+        <!--RECOMMENDED COURSES-->
+        <div class="pt-lg-12 pb-lg-3 pt-8 pb-6">
+            <div class="container ">
+
+                <div class="mb-4 row">
+                    <div class="col">
+                        <h4 class="mb-0 mx-2 heading2">
+                            Recommended to you</h4>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="card-deck hover-zoom pb-5">
+                            <a href="./courses.html">
+                                <div class="card">
+                                    <img class="img-fluid card-img-top rounded-top-md" src="./Assets/Images/g1.jpg"
+                                       alt="graph" >
+                                    <div class="card-body">
+                                       <div class="mb-2 text-truncate">
+                                        <a href="./courses.html" class="card-title text-decoration-none">GraphQL:
+                                            introduction to graphQL for
+                                            beginners</a>
+                                        </div>
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item">
+                                                <i class="fa fa-clock-o"></i>
+                                                <span>2h 40m</span>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <img src="./Assets/Images/advance.PNG" alt="logo">
+                                                Advance
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <img src="./Assets/Images/rating 2.png" alt="logo">
+                                            </li>
+                                        </ul>
+                                        <div class="card-text">
+                                            <span><strong>$500</strong></span>
+                                            <del class=" disabled text-muted"> $600</del>
+
+                                        </div>
+                                    </div>
+                                    <div class="class-footer border-top">
+                                        <div class="align-items-center g-0 row">
+                                            <div class="col-auto col">
+                                                <img src="/Assets/Images/p2.jpg" alt="" class="avatar rounded-circle" id="tutor" >
+                                            </div>
+                                            <div class="col ms-2 col">
+                                                <span>Brooklyn Simmons</span>
+                                            </div>
+                                            <div class="col-auto col">
+                                                <a class="text-muted bookmark" href="/">
+                                                    <i class="fa fa-bookmark-o"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="card-deck pb-5">
+                            <a href="./courses.html">
+                                <div class="card">
+                                    <img class="img-fluid card-img-top rounded-top-md" src="./Assets/Images/js.jpg"
+                                       alt="graph">
+                                    <div class="card-body">
+                                        <div class="mb-2 text-truncate">
+                                        <a href="./courses.html" class="card-title text-decoration-none">A complete
+                                            Beginner guide's to javaScript</a>
+                                            </div>
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item">
+                                                <i class="fa fa-clock-o"></i>
+                                                <span>4h 10m</span>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <img src="./Assets/Images/advance.PNG" alt="logo">
+                                                Advance
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <img src="./Assets/Images/rating 2.png" alt="logo">
+                                            </li>
+                                        </ul>
+                                        <div class="card-text">
+                                            <span><strong>$700</strong></span>
+                                            <del class=" disabled text-muted"> $850</del>
+                                        </div>
+                                    </div>
+
+                                    <div class="class-footer border-top">
+                                        <div class="align-items-center g-0 row">
+                                            <div class="col-auto col">
+                                                <img src="/Assets/Images/p6.jpg" alt="" class="avatar rounded-circle" id="tutor" >
+                                            </div>
+                                            <div class="col ms-2 col">
+                                                <span>Jenny Wilson</span>
+                                            </div>
+                                            <div class="col-auto col">
+                                                <a class="text-muted bookmark" href="/">
+                                                    <i class="fa fa-bookmark-o"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="card-deck pb-5">
+                            <a href="./courses.html">
+                                <div class="card">
+                                    <img class="img-fluid card-img-top rounded-top-md" src="./Assets/Images/njs.jpg"
+                                        alt="graph">
+                                    <div class="card-body">
+                                        <div class="mb-2 text-truncate">
+                                        <a href="./courses.html" class="card-title text-decoration-none">Beginning
+                                            Node.js,Express & MongoDB Development</a>
+                                            </div>
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item">
+                                                <i class="fa fa-clock-o"></i>
+                                                <span>2h 00m</span>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <img src="./Assets/Images/inter.PNG" alt="logo">
+                                                Intermediate
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <img src="./Assets/Images/rating.png" alt="logo">
+                                            </li>
+                                        </ul>
+                                        <div class="card-text">
+                                            <span><strong>$800</strong></span>
+                                            <del class=" disabled text-muted"> $950</del>
+                                        </div>
+                                    </div>
+
+                                    <div class="class-footer border-top">
+
+                                        <div class="align-items-center g-0 row">
+                                            <div class="col-auto col">
+                                                <img src="/Assets/Images/p4.jpg" alt="" class="avatar rounded-circle" id="tutor" >
+                                            </div>
+                                            <div class="col ms-2 col">
+                                                <span>Sina Ray</span>
+                                            </div>
+                                            <div class="col-auto col">
+                                                <a class="text-muted bookmark" href="/">
+                                                    <i class="fa fa-bookmark-o"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="card-deck pb-5">
+                            <a href="./courses.html">
+                                <div class="card">
+                                    <img class="img-fluid card-img-top rounded-top-md" src="./Assets/Images/la.jpg"
+                                         alt="graph">
+                                    <div class="card-body">
+                                        <div class="mb-2 text-truncate">
+                                        <a href="./courses.html" class="card-title text-decoration-none">Laravel: The
+                                            ultimate Beginner's Guide to Learn</a>
+                                            </div>
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item">
+                                                <i class="fa fa-clock-o"></i>
+                                                <span>1h 00m</span>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <img src="./Assets/Images/beg.PNG" alt="logo">
+                                                Beginner
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <img src="./Assets/Images/rating 4.png" alt="logo">
+                                            </li>
+                                        </ul>
+                                        <div class="card-text">
+                                            <span><strong>$170</strong></span>
+                                            <del class=" disabled text-muted"> $220</del>
+                                        </div>
+                                    </div>
+                                    <div class="class-footer border-top">
+
+                                        <div class="align-items-center g-0 row">
+                                            <div class="col-auto col">
+                                                <img src="/Assets/Images/p3.jpg" alt="" class="avatar rounded-circle" id="tutor" >
+                                            </div>
+                                            <div class="col ms-2 col">
+                                                <span>Sobo Rikhan</span>
+                                            </div>
+                                            <div class="col-auto col">
+                                                <a class="text-muted bookmark" href="/">
+                                                    <i class="fa fa-bookmark-o"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--MOST POPULAR COURSES-->
+        <div class="pb-lg-3 pt-lg-3">
+            <div class="container ">
+
+                <div class="mb-4 row">
+                    <div class="col">
+                        <h4 class="mb-0 mx-2 heading2" >
+                            Most Popular</h4>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="card-deck hover-zoom pb-5">
+                            <a href="./courses.html">
+                                <div class="card">
+                                    <img class="img-fluid card-img-top rounded-top-md" src="./Assets/Images/g1.jpg"
+                                       alt="graph" >
+                                    <div class="card-body">
+                                       <div class="mb-2 text-truncate">
+                                        <a href="./courses.html" class="card-title text-decoration-none">GraphQL:
+                                            introduction to graphQL for
+                                            beginners</a>
+                                        </div>
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item">
+                                                <i class="fa fa-clock-o"></i>
+                                                <span>2h 40m</span>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <img src="./Assets/Images/advance.PNG" alt="logo">
+                                                Advance
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <img src="./Assets/Images/rating 2.png" alt="logo">
+                                            </li>
+                                        </ul>
+                                        <div class="card-text">
+                                            <span><strong>$500</strong></span>
+                                            <del class=" disabled text-muted"> $600</del>
+
+                                        </div>
+                                    </div>
+                                    <div class="class-footer border-top">
+                                        <div class="align-items-center g-0 row">
+                                            <div class="col-auto col">
+                                                <img src="/Assets/Images/p2.jpg" alt="" class="avatar rounded-circle" id="tutor" >
+                                            </div>
+                                            <div class="col ms-2 col">
+                                                <span>Brooklyn Simmons</span>
+                                            </div>
+                                            <div class="col-auto col">
+                                                <a class="text-muted bookmark" href="/">
+                                                    <i class="fa fa-bookmark-o"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="card-deck pb-5">
+                            <a href="./courses.html">
+                                <div class="card">
+                                    <img class="img-fluid card-img-top rounded-top-md" src="./Assets/Images/js.jpg"
+                                       alt="graph">
+                                    <div class="card-body">
+                                        <div class="mb-2 text-truncate">
+                                        <a href="./courses.html" class="card-title text-decoration-none">A complete
+                                            Beginner guide's to javaScript</a>
+                                            </div>
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item">
+                                                <i class="fa fa-clock-o"></i>
+                                                <span>4h 10m</span>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <img src="./Assets/Images/advance.PNG" alt="logo">
+                                                Advance
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <img src="./Assets/Images/rating 2.png" alt="logo">
+                                            </li>
+                                        </ul>
+                                        <div class="card-text">
+                                            <span><strong>$700</strong></span>
+                                            <del class=" disabled text-muted"> $850</del>
+                                        </div>
+                                    </div>
+
+                                    <div class="class-footer border-top">
+                                        <div class="align-items-center g-0 row">
+                                            <div class="col-auto col">
+                                                <img src="/Assets/Images/p6.jpg" alt="" class="avatar rounded-circle" id="tutor" >
+                                            </div>
+                                            <div class="col ms-2 col">
+                                                <span>Jenny Wilson</span>
+                                            </div>
+                                            <div class="col-auto col">
+                                                <a class="text-muted bookmark" href="/">
+                                                    <i class="fa fa-bookmark-o"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="card-deck pb-5">
+                            <a href="./courses.html">
+                                <div class="card">
+                                    <img class="img-fluid card-img-top rounded-top-md" src="./Assets/Images/njs.jpg"
+                                        alt="graph">
+                                    <div class="card-body">
+                                        <div class="mb-2 text-truncate">
+                                        <a href="./courses.html" class="card-title text-decoration-none">Beginning
+                                            Node.js,Express & MongoDB Development</a>
+                                            </div>
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item">
+                                                <i class="fa fa-clock-o"></i>
+                                                <span>2h 00m</span>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <img src="./Assets/Images/inter.PNG" alt="logo">
+                                                Intermediate
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <img src="./Assets/Images/rating.png" alt="logo">
+                                            </li>
+                                        </ul>
+                                        <div class="card-text">
+                                            <span><strong>$800</strong></span>
+                                            <del class=" disabled text-muted"> $950</del>
+                                        </div>
+                                    </div>
+
+                                    <div class="class-footer border-top">
+
+                                        <div class="align-items-center g-0 row">
+                                            <div class="col-auto col">
+                                                <img src="/Assets/Images/p4.jpg" alt="" class="avatar rounded-circle" id="tutor" >
+                                            </div>
+                                            <div class="col ms-2 col">
+                                                <span>Sina Ray</span>
+                                            </div>
+                                            <div class="col-auto col">
+                                                <a class="text-muted bookmark" href="/">
+                                                    <i class="fa fa-bookmark-o"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="card-deck pb-5">
+                            <a href="./courses.html">
+                                <div class="card">
+                                    <img class="img-fluid card-img-top rounded-top-md" src="./Assets/Images/la.jpg"
+                                         alt="graph">
+                                    <div class="card-body">
+                                        <div class="mb-2 text-truncate">
+                                        <a href="./courses.html" class="card-title text-decoration-none">Laravel: The
+                                            ultimate Beginner's Guide to Learn</a>
+                                            </div>
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item">
+                                                <i class="fa fa-clock-o"></i>
+                                                <span>1h 00m</span>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <img src="./Assets/Images/beg.PNG" alt="logo">
+                                                Beginner
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <img src="./Assets/Images/rating 4.png" alt="logo">
+                                            </li>
+                                        </ul>
+                                        <div class="card-text">
+                                            <span><strong>$170</strong></span>
+                                            <del class=" disabled text-muted"> $220</del>
+                                        </div>
+                                    </div>
+                                    <div class="class-footer border-top">
+
+                                        <div class="align-items-center g-0 row">
+                                            <div class="col-auto col">
+                                                <img src="/Assets/Images/p3.jpg" alt="" class="avatar rounded-circle" id="tutor" >
+                                            </div>
+                                            <div class="col ms-2 col">
+                                                <span>Sobo Rikhan</span>
+                                            </div>
+                                            <div class="col-auto col">
+                                                <a class="text-muted bookmark" href="/">
+                                                    <i class="fa fa-bookmark-o"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+                <!--TRENDING COURSES-->
+                <div class="pb-lg-5 pt-lg-3 py-6">
+                    <div class="container ">
+                        <div class="mb-4 row">
+                            <div class="col">
+                                <h4 class="mb-0 mx-2 heading2" >
+                                    Trending</h4>
+                            </div>
+                        </div>
+        
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                                <div class="card-deck hover-zoom pb-5">
+                                    <a href="./courses.html">
+                                        <div class="card">
+                                            <img class="img-fluid card-img-top rounded-top-md" src="./Assets/Images/g1.jpg"
+                                               alt="graph" >
+                                            <div class="card-body">
+                                               <div class="mb-2 text-truncate">
+                                                <a href="./courses.html" class="card-title text-decoration-none">GraphQL:
+                                                    introduction to graphQL for
+                                                    beginners</a>
+                                                </div>
+                                                <ul class="list-inline">
+                                                    <li class="list-inline-item">
+                                                        <i class="fa fa-clock-o"></i>
+                                                        <span>2h 40m</span>
+                                                    </li>
+                                                    <li class="list-inline-item">
+                                                        <img src="./Assets/Images/advance.PNG" alt="logo">
+                                                        Advance
+                                                    </li>
+                                                    <li class="list-inline-item">
+                                                        <img src="./Assets/Images/rating 2.png" alt="logo">
+                                                    </li>
+                                                </ul>
+                                                <div class="card-text">
+                                                    <span><strong>$500</strong></span>
+                                                    <del class=" disabled text-muted"> $600</del>
+        
+                                                </div>
+                                            </div>
+                                            <div class="class-footer border-top">
+                                                <div class="align-items-center g-0 row">
+                                                    <div class="col-auto col">
+                                                        <img src="/Assets/Images/p2.jpg" alt="" class="avatar rounded-circle" id="tutor" >
+                                                    </div>
+                                                    <div class="col ms-2 col">
+                                                        <span>Brooklyn Simmons</span>
+                                                    </div>
+                                                    <div class="col-auto col">
+                                                        <a class="text-muted bookmark" href="/">
+                                                            <i class="fa fa-bookmark-o"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+        
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                                <div class="card-deck pb-5">
+                                    <a href="./courses.html">
+                                        <div class="card">
+                                            <img class="img-fluid card-img-top rounded-top-md" src="./Assets/Images/js.jpg"
+                                               alt="graph">
+                                            <div class="card-body">
+                                                <div class="mb-2 text-truncate">
+                                                <a href="./courses.html" class="card-title text-decoration-none">A complete
+                                                    Beginner guide's to javaScript</a>
+                                                    </div>
+                                                <ul class="list-inline">
+                                                    <li class="list-inline-item">
+                                                        <i class="fa fa-clock-o"></i>
+                                                        <span>4h 10m</span>
+                                                    </li>
+                                                    <li class="list-inline-item">
+                                                        <img src="./Assets/Images/advance.PNG" alt="logo">
+                                                        Advance
+                                                    </li>
+                                                    <li class="list-inline-item">
+                                                        <img src="./Assets/Images/rating 2.png" alt="logo">
+                                                    </li>
+                                                </ul>
+                                                <div class="card-text">
+                                                    <span><strong>$700</strong></span>
+                                                    <del class=" disabled text-muted"> $850</del>
+                                                </div>
+                                            </div>
+        
+                                            <div class="class-footer border-top">
+                                                <div class="align-items-center g-0 row">
+                                                    <div class="col-auto col">
+                                                        <img src="/Assets/Images/p6.jpg" alt="" class="avatar rounded-circle" id="tutor" >
+                                                    </div>
+                                                    <div class="col ms-2 col">
+                                                        <span>Jenny Wilson</span>
+                                                    </div>
+                                                    <div class="col-auto col">
+                                                        <a class="text-muted bookmark" href="/">
+                                                            <i class="fa fa-bookmark-o"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+        
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                                <div class="card-deck pb-5">
+                                    <a href="./courses.html">
+                                        <div class="card">
+                                            <img class="img-fluid card-img-top rounded-top-md" src="./Assets/Images/njs.jpg"
+                                                alt="graph">
+                                            <div class="card-body">
+                                                <div class="mb-2 text-truncate">
+                                                <a href="./courses.html" class="card-title text-decoration-none">Beginning
+                                                    Node.js,Express & MongoDB Development</a>
+                                                    </div>
+                                                <ul class="list-inline">
+                                                    <li class="list-inline-item">
+                                                        <i class="fa fa-clock-o"></i>
+                                                        <span>2h 00m</span>
+                                                    </li>
+                                                    <li class="list-inline-item">
+                                                        <img src="./Assets/Images/inter.PNG" alt="logo">
+                                                        Intermediate
+                                                    </li>
+                                                    <li class="list-inline-item">
+                                                        <img src="./Assets/Images/rating.png" alt="logo">
+                                                    </li>
+                                                </ul>
+                                                <div class="card-text">
+                                                    <span><strong>$800</strong></span>
+                                                    <del class=" disabled text-muted"> $950</del>
+                                                </div>
+                                            </div>
+        
+                                            <div class="class-footer border-top">
+        
+                                                <div class="align-items-center g-0 row">
+                                                    <div class="col-auto col">
+                                                        <img src="/Assets/Images/p4.jpg" alt="" class="avatar rounded-circle" id="tutor" >
+                                                    </div>
+                                                    <div class="col ms-2 col">
+                                                        <span>Sina Ray</span>
+                                                    </div>
+                                                    <div class="col-auto col">
+                                                        <a class="text-muted bookmark" href="/">
+                                                            <i class="fa fa-bookmark-o"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+        
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+        
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                                <div class="card-deck pb-5">
+                                    <a href="./courses.html">
+                                        <div class="card">
+                                            <img class="img-fluid card-img-top rounded-top-md" src="./Assets/Images/la.jpg"
+                                                 alt="graph">
+                                            <div class="card-body">
+                                                <div class="mb-2 text-truncate">
+                                                <a href="./courses.html" class="card-title text-decoration-none">Laravel: The
+                                                    ultimate Beginner's Guide to Learn</a>
+                                                    </div>
+                                                <ul class="list-inline">
+                                                    <li class="list-inline-item">
+                                                        <i class="fa fa-clock-o"></i>
+                                                        <span>1h 00m</span>
+                                                    </li>
+                                                    <li class="list-inline-item">
+                                                        <img src="./Assets/Images/beg.PNG" alt="logo">
+                                                        Beginner
+                                                    </li>
+                                                    <li class="list-inline-item">
+                                                        <img src="./Assets/Images/rating 4.png" alt="logo">
+                                                    </li>
+                                                </ul>
+                                                <div class="card-text">
+                                                    <span><strong>$170</strong></span>
+                                                    <del class=" disabled text-muted"> $220</del>
+                                                </div>
+                                            </div>
+                                            <div class="class-footer border-top">
+        
+                                                <div class="align-items-center g-0 row">
+                                                    <div class="col-auto col">
+                                                        <img src="/Assets/Images/p3.jpg" alt="" class="avatar rounded-circle" id="tutor" >
+                                                    </div>
+                                                    <div class="col ms-2 col">
+                                                        <span>Sobo Rikhan</span>
+                                                    </div>
+                                                    <div class="col-auto col">
+                                                        <a class="text-muted bookmark" href="/">
+                                                            <i class="fa fa-bookmark-o"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                        <!--FOOTER-->
+        <div class="footer bg-transparent">
+            <div class="container">
+                <div class="align-items-center g-0 border-top py-2 row">
+                    <div class="text-center text-md-start col-md-6 col-sm-12">
+                        <span>© 2022 Geeks. All Rights Reserved.</span>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <nav class="nav nav-footer justify-content-center justify-content-md-end">
+                            <a class="nav-link active ps-3 pe-3" href="#">Privacy</a>
+                            <a class="nav-link ps-3 pe-3" href="#">Terms </a>
+                            <a class="nav-link ps-3 pe-3" href="#">Feedback</a>
+                            <a class="nav-link ps-3 pe-3" href="#">Support</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- Bootstrap JavaScript plugin Bundles -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

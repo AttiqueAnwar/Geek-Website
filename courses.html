@@ -1,0 +1,1481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geeks React </title>
+  <link rel="icon" type="image/x-icon" href="/Assets/Images/logo.PNG">
+  <!--ICONS TOOLKIT  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--Bootstrap Bundle-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="./Assets/css/style.css">
+</head>
+
+<body>
+  <div id="root">
+    <div class="App">
+      <!-- NAV BAR STARTS HERE -->
+      <nav class="bg-white navbar p-2 navbar-default py-2 navbar navbar-expand-lg navbar-light">
+        <div class="px-0 ps-2 container-fluid">
+          <a class="navbar-brand" href="#"><img src="/Assets/Images/geeks logo.png"></a>
+          <div class="navbar-nav navbar-right-wrap ms-auto d-lg-none nav-top-wrap d-none">
+            <div class="mt-2 me-0 dropdown nav-item">
+              <!-- NOTIFICATIONS DROPDOWN -->
+              <div class="dropdown">
+                <span class="d-flex">
+                  <a class="nav-link dropdown float-sm-right float-md-right float-lg-right float-xl-right" !important
+                    href="#" id="notifydropdown" role="button" data-toggle="dropdown">
+                    <div class='status-circle-notify'>
+                    </div>
+                    <span class="text-dark icon-notifications me-lg-1  btn btn-light btn-icon rounded-circle "
+                      id="notify">
+                      <i class="fa fa-bell-o">
+                      </i>
+                    </span>
+                  </a>
+                </span>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">
+                    <div class="d-flex justify-content-between">Notifications<i class="fa fa-gear"></i></div>
+                  </a>
+                  <hr class="dropdown-divider" role="separator">
+                  <a class="py-2 px-3 dropdown-item" href="#">
+                    <div class="d-flex align-items-center">
+                      <div class="avatar avatar-md  "><img alt="avatar" src="/Assets/Images/p6.jpg"
+                          class="avatar rounded-circle" width="40" height="40"></div>
+                      <div class="ms-3 lh-1">
+                        <h6 class="mb-0"><strong>Jenny Wilson</strong> </h6>
+                        <p class="mb-0 fs-6 text-muted">Krisitn Watsan like your comment on <br>
+                          course
+                          Javascript Introduction!</p>
+                      </div>
+                    </div>
+                  </a>
+                  <hr class="dropdown-divider" role="separator">
+                  <a class="py-2 px-3 dropdown-item" href="#">
+                    <div class="d-flex align-items-center">
+                      <div class="avatar avatar-md  "><img alt="avatar" src="/Assets/Images/p7.jpg"
+                          class="avatar rounded-circle" width="40" height="40"></div>
+                      <div class="ms-3 lh-1">
+                        <h6 class="mb-0"><strong>Rina Ray</strong></h6>
+                        <p class="mb-0 fs-6 text-muted">You earn new certificate for<br>
+                          complete the
+                          Javascript Beginner<br> course. </p>
+                      </div>
+                    </div>
+                  </a>
+                  <hr class="dropdown-divider" role="separator">
+                  <a class="py-2 px-3 dropdown-item" href="#">
+                    <div class="d-flex align-items-center">
+                      <div class="avatar avatar-md  "><img alt="avatar" src="/Assets/Images/p7.jpg"
+                          class="avatar rounded-circle" width="40" height="40"></div>
+                      <div class="ms-3 lh-1">
+                        <h6 class="mb-0"><strong>Rina Ray</strong></h6>
+                        <p class="mb-0 fs-6 text-muted">You earn new certificate for<br>
+                          complete the
+                          Javascript Beginner<br> course. </p>
+                      </div>
+                    </div>
+                  </a>
+                  <hr class="dropdown-divider" role="separator">
+                  <a class="dropdown-item" href="#">
+                    <div class="d-flex justify-content-between fs-6">See all Notifications</div>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+            <div class="dropdown nav-item">
+              <!-- PROFILE DROPDOWN -->
+              <div class="dropdown">
+                <a class="nav-link dropdown float-sm-right float-md-right float-lg-right float-xl-right" href="#"
+                  id="navbarDropdown" role="button" data-toggle="dropdown">
+                  <img src="./Assets/Images/p1.jpg" class="avatar rounded-circle" width="40" height="40" alt="">
+
+                </a>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                  <a class="py-2 px-3 dropdown-item" href="#">
+                    <div class="d-flex align-items-center">
+                      <div class="avatar avatar-md avatar-indicators2 avatar-online"><img alt="avatar"
+                          src="/Assets/Images/p1.jpg" class="avatar rounded-circle" width="40" height="40"></div>
+                      <div class="ms-3 lh-1">
+                        <h6 class="mb-0">Annette Black</h6>
+                        <p class="mb-0 fs-6 text-muted">annette@geeksui.com</p>
+                      </div>
+                    </div>
+                  </a>
+                  <hr class="dropdown-divider" role="separator">
+                  <a class="dropdown-item" href="#"><i class="fa fa-user me-2"></i>Profile </a>
+                  <a class="dropdown-item" href="#"><i class="fa fa-star me-2"></i>Subscription</a>
+                  <a class="dropdown-item" href="#"><i class="fa fa-gear me-2"></i>Settings</a>
+                  <hr class="dropdown-divider" role="separator">
+                  <a class="dropdown-item" href="#"><i class="fa fa-power-off me-2"></i>Signout</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--TOGGLE DROPDOWN ON SMALL SCREENS -->
+          <div class="d-flex">
+            <div class="d-lg-none d-md-block">
+              <span class="d-flex">
+                <div class="mt-2 me-0 dropdown nav-item">
+                  <a id="dropdownNotification" aria-expanded="false" role="button"
+                    class="text-dark icon-notifications me-lg-1  btn btn-white btn-icon rounded-circle indicator indicator-primary text-muted dt nav-link d-flex justify-content-center align-items-center"
+                    tabindex="0" href="#">
+                    <i class="fa fa-bell-o"></i>
+                  </a>
+                  <!-- NOTIFICATIONS DROPDOWN -->
+                  <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">
+                      <div class="d-flex justify-content-between">Notifications<i class="fa fa-gear"></i></div>
+                    </a>
+                    <hr class="dropdown-divider" role="separator">
+                    <a class="py-2 px-3 dropdown-item" href="#">
+                      <div class="d-flex align-items-center">
+                        <div class="avatar avatar-md  "><img alt="avatar" src="/Assets/Images/p6.jpg"
+                            class="avatar rounded-circle" width="40" height="40"></div>
+                        <div class="ms-3 lh-1">
+                          <h6 class="mb-0"><strong>Jenny Wilson</strong> </h6>
+                          <p class="mb-0 fs-6 text-muted">Krisitn Watsan like your comment on
+                            <br> course
+                            Javascript Introduction!
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                    <hr class="dropdown-divider" role="separator">
+                    <a class="py-2 px-3 dropdown-item" href="#">
+                      <div class="d-flex align-items-center">
+                        <div class="avatar avatar-md  "><img alt="avatar" src="/Assets/Images/p7.jpg"
+                            class="avatar rounded-circle" width="40" height="40"></div>
+                        <div class="ms-3 lh-1">
+                          <h6 class="mb-0"><strong>Rina Ray</strong></h6>
+                          <p class="mb-0 fs-6 text-muted">You earn new certificate for<br>
+                            complete the
+                            Javascript Beginner<br> course. </p>
+                        </div>
+                      </div>
+                    </a>
+                    <hr class="dropdown-divider" role="separator">
+                    <a class="py-2 px-3 dropdown-item" href="#">
+                      <div class="d-flex align-items-center">
+                        <div class="avatar avatar-md  "><img alt="avatar" src="/Assets/Images/p7.jpg"
+                            class="avatar rounded-circle" width="40" height="40"></div>
+                        <div class="ms-3 lh-1">
+                          <h6 class="mb-0"><strong>Rina Ray</strong></h6>
+                          <p class="mb-0 fs-6 text-muted">You earn new certificate for<br>
+                            complete the
+                            Javascript Beginner<br> course. </p>
+                        </div>
+                      </div>
+                    </a>
+                    <hr class="dropdown-divider" role="separator">
+                    <a class="dropdown-item" href="#">
+                      <div class="d-flex justify-content-between fs-6">See all Notifications</div>
+                    </a>
+                  </div>
+                </div>
+                <div class="dropdown nav-item">
+                  <a id="dropdownUser" aria-expanded="false" role="button"
+                    class="rounded-circle border-bottom-0 dt nav-link" tabindex="0" href="#">
+                    <div class="avatar avatar-md avatar-indicators avatar-indicators">
+                      <img alt="avatar" src="/Assets/Images/p1.jpg" class="rounded-circle" width="40" height="40">
+                    </div>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <a class="py-2 px-3 dropdown-item" href="#">
+                      <div class="d-flex align-items-center">
+                        <div class="avatar avatar-md avatar-indicators2 avatar-online"><img alt="avatar"
+                            src="/Assets/Images/p1.jpg" class="avatar rounded-circle" width="40" height="40"></div>
+                        <div class="ms-3 lh-1">
+                          <h6 class="mb-0">Annette Black</h6>
+                          <p class="mb-0 fs-6 text-muted">annette@geeksui.com</p>
+                        </div>
+                      </div>
+                    </a>
+                    <hr class="dropdown-divider" role="separator">
+                    <a class="dropdown-item" href="#"><i class="fa fa-user me-2"></i>Profile </a>
+                    <a class="dropdown-item" href="#"><i class="fa fa-star me-2"></i>Subscription</a>
+                    <a class="dropdown-item" href="#"><i class="fa fa-gear me-2"></i>Settings</a>
+                    <hr class="dropdown-divider" role="separator">
+                    <a class="dropdown-item" href="#"><i class="fa fa-power-off me-2"></i>Signout</a>
+                  </div>
+                </div>
+              </span>
+            </div>
+            <button aria-controls="basic-navbar-nav" type="button" aria-label="toggle navigation"
+              class="navbar-toggler collapsed" data-bs-target="#bas-navbar-nav" data-bs-toggle="collapse"
+              aria-controls="basic-navbar-nav" aria-expanded="false">
+
+              <span class="navbar-toggler-icon mt-0"></span>
+            </button>
+          </div>
+          <div class="navbar-collapse collapse" id="bas-navbar-nav">
+            <div class="navbar-nav">
+              <!--Browse class-->
+              <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Browse
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item btn disabled" href="#">Browse</a>
+                  <a class="dropdown-item" href="#">Design</a>
+                  <a class="dropdown-item" href="#">Mobile App</a>
+                  <a class="dropdown-item" href="#">IT Software</a>
+                  <a class="dropdown-item" href="#">Marketing</a>
+                  <a class="dropdown-item" href="#">Music</a>
+                  <a class="dropdown-item" href="#">Life Style</a>
+                  <a class="dropdown-item" href="#">Buisness</a>
+                  <a class="dropdown-item" href="#">Photography</a>
+                </div>
+              </div>
+              <!--Landings class-->
+              <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                  Landings
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item btn disabled" href="#">Landings</a>
+                  <a class="dropdown-item" href="#">Courses</a>
+                  <a class="dropdown-item" href="#">Lead Courses</a>
+                  <a class="dropdown-item" href="#">Request Access</a>
+                  <a class="dropdown-item" href="#">Saas</a>
+                </div>
+              </div>
+              <!--Pages class-->
+              <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                  Pages
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item btn disabled" href="#">Pages</a>
+                  <a class="dropdown-item" href="#">Courses</a>
+                  <a class="dropdown-item" href="#">Paths</a>
+                  <a class="dropdown-item" href="#">Blog</a>
+                  <a class="dropdown-item" href="#">Career</a>
+                  <a class="dropdown-item" href="#">Speciality</a>
+                  <hr>
+                  <a class="dropdown-item" href="#">About</a>
+                  <a class="dropdown-item" href="#">Help Center <span class="badge bg-primary">New
+                    </span>
+                  </a>
+                  <a class="dropdown-item" href="#">Pricing</a>
+                  <a class="dropdown-item" href="#">Compare Plan</a>
+                  <a class="dropdown-item" href="#">Contact</a>
+                </div>
+              </div>
+              <!--Accounts class-->
+              <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                  Accounts
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item btn disabled" href="#">Accounts</a>
+                  <a class="dropdown-item" href="#">Instructor</a>
+                  <a class="dropdown-item" href="#">Students</a>
+                  <a class="dropdown-item" href="#">Admin</a>
+                  <hr>
+                  <a class="dropdown-item" href="#">Sign In</a>
+                  <a class="dropdown-item" href="#">Sign Up</a>
+                  <a class="dropdown-item" href="#">Forgot Password</a>
+                  <a class="dropdown-item" href="#">Edit Profile</a>
+                  <a class="dropdown-item" href="#">Security</a>
+                  <a class="dropdown-item" href="#">Social Profiles</a>
+                  <a class="dropdown-item" href="#">Notifications</a>
+                  <a class="dropdown-item" href="#">Privacy Settings</a>
+                  <a class="dropdown-item" href="#">Delete Profile</a>
+                  <a class="dropdown-item" href="#">Linked Accounts</a>
+                </div>
+              </div>
+              <!--Dots Dropdown-->
+              <div class="nav-item dropdown">
+                <a class=" nav-link dropdown lh-1" href="#" id="navbarDropdown" data-toggle="dropdown">
+                  <b>...</b>
+                </a>
+                <div class="dropdown-menu">
+                  <a class="py-2 px-3 dropdown-item" href="#">
+                    <div class="d-flex align-items-center">
+                      <i class="fa fa-file-text-o fs-5 text-primary"></i>
+                      <div class="ms-3 lh-3">
+                        <h6 class="mb-0">Documentations</h6>
+                        <p class="mb-0 fs-6">Browse all the Documentations</p>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="py-2 px-3 dropdown-item" href="#">
+                    <div class="d-flex align-items-center">
+                      <i class="fa fa-file-archive-o fs-5 text-primary"></i>
+                      <div class="ms-3 lh-3">
+                        <h6 class="mb-0">Changelog v1.4.0</h6>
+                        <p class="mb-0 fs-6">See Whats's new</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between w-100">
+              <!-- Search Form -->
+              <form class="mt-3 mt-lg-0 ms-lg-4 d-flex align-items-center">
+                <input placeholder="Search Courses" type="Search" id="formSearch" class=" form-control">
+                <span class="position-absolute search icon ps-3">
+                  <i class="fa fa-search"></i>
+                </span>
+              </form>
+              <div class="d-none d-lg-block d-sm-none">
+                <span class="d-flex">
+                  <div class="mt-2 me-0 dropdown nav-item">
+                    <a id="dropdownNotification" aria-expanded="false" role="button"
+                      class="text-dark icon-notifications me-lg-1  btn btn-white btn-icon rounded-circle indicator indicator-primary text-muted dt nav-link d-flex justify-content-center align-items-center"
+                      tabindex="0" href="#">
+                      <i class="fa fa-bell-o"></i>
+                    </a>
+                    </a>
+                    <!-- NOTIFICATIONS Menu -->
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">
+                        <div class="d-flex justify-content-between">Notifications<i class="fa fa-gear"></i></div>
+                      </a>
+                      <hr class="dropdown-divider" role="separator">
+                      <a class="py-2 px-3 dropdown-item" href="#">
+                        <div class="d-flex align-items-center">
+                          <div class="avatar avatar-md  "><img alt="avatar" src="/Assets/Images/p6.jpg"
+                              class="avatar rounded-circle" width="40" height="40"></div>
+                          <div class="ms-3 lh-1">
+                            <h6 class="mb-0"><strong>Jenny Wilson</strong> </h6>
+                            <p class="mb-0 fs-6 text-muted">Krisitn Watsan like your comment
+                              on
+                              <br> course
+                              Javascript Introduction!
+                            </p>
+                          </div>
+                        </div>
+                      </a>
+                      <hr class="dropdown-divider" role="separator">
+                      <a class="py-2 px-3 dropdown-item" href="#">
+                        <div class="d-flex align-items-center">
+                          <div class="avatar avatar-md  "><img alt="avatar" src="/Assets/Images/p7.jpg"
+                              class="avatar rounded-circle" width="40" height="40"></div>
+                          <div class="ms-3 lh-1">
+                            <h6 class="mb-0"><strong>Rina Ray</strong></h6>
+                            <p class="mb-0 fs-6 text-muted">You earn new certificate for<br>
+                              complete the
+                              Javascript Beginner<br> course. </p>
+                          </div>
+                        </div>
+                      </a>
+                      <hr class="dropdown-divider" role="separator">
+                      <a class="py-2 px-3 dropdown-item" href="#">
+                        <div class="d-flex align-items-center">
+                          <div class="avatar avatar-md  "><img alt="avatar" src="/Assets/Images/p7.jpg"
+                              class="avatar rounded-circle" width="40" height="40"></div>
+                          <div class="ms-3 lh-1">
+                            <h6 class="mb-0"><strong>Rina Ray</strong></h6>
+                            <p class="mb-0 fs-6 text-muted">You earn new certificate for<br>
+                              complete the
+                              Javascript Beginner<br> course. </p>
+                          </div>
+                        </div>
+                      </a>
+                      <hr class="dropdown-divider" role="separator">
+                      <a class="dropdown-item" href="#">
+                        <div class="d-flex justify-content-between fs-6">See all Notifications
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <!-- Profile Menu -->
+                  <div class="dropdown nav-item">
+                    <a id="dropdownUser" aria-expanded="false" role="button"
+                      class="rounded-circle border-bottom-0 dt nav-link" tabindex="0" href="#">
+                      <div class="avatar avatar-md avatar-indicators avatar-indicators">
+                        <img alt="avatar" src="/Assets/Images/p1.jpg" class="rounded-circle" width="40" height="40">
+                      </div>
+                    </a>
+
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                      <a class="py-2 px-3 dropdown-item" href="#">
+                        <div class="d-flex align-items-center">
+                          <div class="avatar avatar-md avatar-indicators2 avatar-online"><img alt="avatar"
+                              src="/Assets/Images/p1.jpg" class="avatar rounded-circle" width="40" height="40"></div>
+                          <div class="ms-3 lh-1">
+                            <h6 class="mb-0">Annette Black</h6>
+                            <p class="mb-0 fs-6 text-muted">annette@geeksui.com</p>
+                          </div>
+                        </div>
+                      </a>
+                      <hr class="dropdown-divider" role="separator">
+                      <a class="dropdown-item" href="#"><i class="fa fa-user me-2"></i>Profile
+                      </a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-star me-2"></i>Subscription</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-gear me-2"></i>Settings</a>
+                      <hr class="dropdown-divider" role="separator">
+                      <a class="dropdown-item" href="#"><i class="fa fa-power-off me-2"></i>Signout</a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </nav>
+
+
+      <!--HEADER STARTS-->
+
+      <div class="pt-lg-8 pb-lg-16 pt-8 pb-12 bg-primary">
+        <div class="container">
+          <div class="align-items-center row">
+            <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12">
+              <div>
+                <h1 class="text-white display-6 fw-semi-bold">Getting Started with JavaScript</h1>
+                <p class="text-white textjs lead">JavaScript is the popular programming language which
+                  powers web pages and web applications. This course will get you started coding in
+                  JavaScript.</p>
+                <div class="d-flex align-items-center">
+                  <a class="bookmark text-white text-decoration-none" href="#">
+                    <i class="fa fa-bookmark-o text-white-50 me-2">
+                    </i>Bookmark
+                  </a>
+                  <span class="text-white ms-3"><i class="fa fa-user-o text-white-50"></i> 1200 Enrolled
+                  </span>
+                  <span class="ms-4">
+                    <span class="text-warning">
+                      <span class="fa fa-star "></span>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star-half-full"></span>
+                      <span class="text-white ms-1">(140)</span>
+                    </span>
+                  </span>
+                  <span class="text-white ms-4 d-none d-md-block"><svg width="16" height="16" viewBox="0 0 16 16"
+                      fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="3" y="8" width="2" height="6" rx="1" fill="#DBD8E9"></rect>
+                      <rect x="7" y="5" width="2" height="9" rx="1" fill="#DBD8E9"></rect>
+                      <rect x="11" y="2" width="2" height="12" rx="1" fill="#DBD8E9"></rect>
+                    </svg> <span class="align-middle">Intermediate</span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--CONTAINER FOR TABLIST-->
+      <div class="pb-10">
+        <div class="container">
+          <div class="row">
+            <div class="mt-n8 mb-4 mb-lg-0 col-lg-8 col-md-12 col-sm-12">
+              <div class="card">
+                <ul class="nav-lb-tab nav" id="myTab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="contents-tab" data-bs-toggle="tab" data-bs-target="#contents"
+                      type="button" role="tab" aria-controls="contents" aria-selected="true">Contents</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="description-tab" data-bs-toggle="tab" data-bs-target="#description"
+                      type="button" role="tab" aria-controls="description" aria-selected="false">Description</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews"
+                      type="button" role="tab" aria-controls="reviews" aria-selected="false">Reviews</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="transcript-tab" data-bs-toggle="tab" data-bs-target="#transcript"
+                      type="button" role="tab" aria-controls="transcript" aria-selected="false">Transcript</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="faq-tab" data-bs-toggle="tab" data-bs-target="#faq" type="button"
+                      role="tab" aria-controls="faq" aria-selected="false">FAQ</button>
+                  </li>
+                </ul>
+
+                <div class="p-0 card-body">
+                  <div class="tab-content" id="myTabContent">
+                    <!-- Contents Tabpanel Menu -->
+                    <div role="tabpanel" id="contents" aria-labelledby="contents-tab"
+                      class="pb-4 pt-3 px-4 tab-pane fade show active">
+                      <!-- Accordian Starts here -->
+                      <div class="accordion" id="accordianExample">
+                        <!-- Introduction to Javascript -->
+                        <div class="px-0 accordian-item list-group-item">
+                          <a aria-expanded="true"
+                            class="d-flex align-items-center text-inherit text-decoration-none heading3 mb-0"
+                            data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                            aria-controls="collapseOne" href="#">
+                            <div class="me-auto">Introduction to JavaScript</div><span class="chevron-arrow ms-4"><i
+                                class="fa fa-chevron-down fs-6"></i></span>
+                          </a>
+                          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="py-4  ">
+                              <li class="px-0 py-1 border-0 list-group-item"><a
+                                  class="d-flex justify-content-between align-items-center text-inherit text-decoration-none"
+                                  href="#">
+                                  <div class="text-truncate "><span
+                                      class="icon-shape bg-light text-primary icon-sm rounded-circle me-2 fa fa-play align-items-center"></span><span
+                                      class="acc-text">Introduction</span></div>
+                                  <div class="text-truncate"><span class="acc-text">1m 7s</span></div>
+                                </a></li>
+                              <li class="px-0 py-1 border-0 list-group-item"><a
+                                  class="d-flex justify-content-between align-items-center text-inherit text-decoration-none"
+                                  href="#">
+                                  <div class="text-truncate "><span
+                                      class="icon-shape bg-light text-primary icon-sm rounded-circle me-2"><span
+                                        class="fa fa-play"></span> </span><span class="acc-text">Installing Development
+                                      Software</span>
+                                  </div>
+                                  <div class="text-truncate"><span class="acc-text">3m 11s</span></div>
+                                </a></li>
+                              <li class="px-0 py-1 border-0 list-group-item"><a
+                                  class="d-flex justify-content-between align-items-center text-inherit text-decoration-none"
+                                  href="#">
+                                  <div class="text-truncate "><span
+                                      class="icon-shape bg-light text-primary icon-sm rounded-circle me-2 fa fa-play">
+                                    </span><span class="acc-text">Hello World Project from GitHub</span>
+                                  </div>
+                                  <div class="text-truncate"><span class="acc-text">2m 33s</span></div>
+                                </a></li>
+                              <li tabindex="-1" aria-disabled="true"
+                                class="px-0 py-1 border-0 list-group-item disabled"><a
+                                  class="d-flex justify-content-between align-items-center text-inherit text-decoration-none"
+                                  href="#">
+                                  <div class="text-truncate "><span
+                                      class="icon-shape bg-light text-muted icon-sm rounded-circle me-2"><i
+                                        class="fa fa-lock fs-6"></i> </span><span class="acc-text">Our Sample
+                                      Website</span></div>
+                                  <div class="text-truncate"><span class="acc-text">2m 15s</span></div>
+                                </a></li>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Javascript Beginning -->
+                        <div class="px-0 accordian-item list-group-item">
+                          <a aria-expanded="false"
+                            class="d-flex align-items-center text-inherit text-decoration-none heading3 mb-0 collapsed"
+                            data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true"
+                            aria-controls="collapseTwo" href="#">
+                            <div class="me-auto">JavaScript Beginning</div><span class="chevron-arrow ms-4"><i
+                                class="fa fa-chevron-down fs-6"></i></span>
+                          </a>
+                          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample">
+                            <div class="py-4  ">
+                              <li tabindex="-1" aria-disabled="true"
+                                class="px-0 py-1 border-0 list-group-item disabled"><a
+                                  class="d-flex justify-content-between align-items-center text-inherit text-decoration-none"
+                                  href="#">
+                                  <div class="text-truncate "><span
+                                      class="icon-shape bg-light text-muted icon-sm rounded-circle me-2"><i
+                                        class="fa fa-lock fs-6"></i> </span><span class="acc-text">Introduction</span>
+                                  </div>
+                                  <div class="text-truncate"><span class="acc-text">1m 41s</span></div>
+                                </a></li>
+                              <li tabindex="-1" aria-disabled="true"
+                                class="px-0 py-1 border-0 list-group-item disabled"><a
+                                  class="d-flex justify-content-between align-items-center text-inherit text-decoration-none"
+                                  href="#">
+                                  <div class="text-truncate "><span
+                                      class="icon-shape bg-light text-muted icon-sm rounded-circle me-2"><i
+                                        class="fa fa-lock fs-6"></i> </span><span class="acc-text">Working with
+                                      JavaScript
+                                      Files</span></div>
+                                  <div class="text-truncate"><span class="acc-text">6m 18s</span></div>
+                                </a></li>
+                              <li tabindex="-1" aria-disabled="true"
+                                class="px-0 py-1 border-0 list-group-item disabled"><a
+                                  class="d-flex justify-content-between align-items-center text-inherit text-decoration-none"
+                                  href="#">
+                                  <div class="text-truncate "><span
+                                      class="icon-shape bg-light text-muted icon-sm rounded-circle me-2"><i
+                                        class="fa fa-lock fs-6"></i> </span><span class="acc-text">Formatting
+                                      Code</span>
+                                  </div>
+                                  <div class="text-truncate"><span class="acc-text">2m 18s</span></div>
+                                </a></li>
+                              <li tabindex="-1" aria-disabled="true"
+                                class="px-0 py-1 border-0 list-group-item disabled"><a
+                                  class="d-flex justify-content-between align-items-center text-inherit text-decoration-none"
+                                  href="#">
+                                  <div class="text-truncate "><span
+                                      class="icon-shape bg-light text-muted icon-sm rounded-circle me-2"><i
+                                        class="fa fa-lock fs-6"></i> </span><span class="acc-text">Detecting and
+                                      Fixing
+                                      Errors</span></div>
+                                  <div class="text-truncate"><span class="acc-text">3m 14s</span></div>
+                                </a></li>
+                              <li tabindex="-1" aria-disabled="true"
+                                class="px-0 py-1 border-0 list-group-item disabled"><a
+                                  class="d-flex justify-content-between align-items-center text-inherit text-decoration-none"
+                                  href="#">
+                                  <div class="text-truncate "><span
+                                      class="icon-shape bg-light text-muted icon-sm rounded-circle me-2"><i
+                                        class="fa fa-lock fs-6"></i> </span><span class="acc-text">Case
+                                      Sensitivity</span>
+                                  </div>
+                                  <div class="text-truncate"><span class="acc-text">1m 48s</span></div>
+                                </a></li>
+                              <li tabindex="-1" aria-disabled="true"
+                                class="px-0 py-1 border-0 list-group-item disabled"><a
+                                  class="d-flex justify-content-between align-items-center text-inherit text-decoration-none"
+                                  href="#">
+                                  <div class="text-truncate "><span
+                                      class="icon-shape bg-light text-muted icon-sm rounded-circle me-2"><i
+                                        class="fa fa-lock fs-6"></i> </span><span class="acc-text">Commenting
+                                      Code</span>
+                                  </div>
+                                  <div class="text-truncate"><span class="acc-text">2m 24s</span></div>
+                                </a></li>
+                              <li tabindex="-1" aria-disabled="true"
+                                class="px-0 py-1 border-0 list-group-item disabled"><a
+                                  class="d-flex justify-content-between align-items-center text-inherit text-decoration-none"
+                                  href="#">
+                                  <div class="text-truncate "><span
+                                      class="icon-shape bg-light text-muted icon-sm rounded-circle me-2"><i
+                                        class="fa fa-lock fs-6"></i> </span><span class="acc-text">Summary</span>
+                                  </div>
+                                  <div class="text-truncate"><span class="acc-text">2m 14s</span></div>
+                                </a></li>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Variables and Constants -->
+                        <div class="px-0 accordian-item list-group-item">
+                          <a aria-expanded="false"
+                            class="d-flex align-items-center text-inherit text-decoration-none heading3 mb-0 collapsed"
+                            data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true"
+                            aria-controls="collapseThree" href="#">
+                            <div class="me-auto">Variables and Constants</div><span class="chevron-arrow ms-4"><i
+                                class="fa fa-chevron-down fs-6"></i></span>
+                          </a>
+                          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                            data-bs-parent="#accordionExample">
+                            <div class="py-4  ">
+                              <li tabindex="-1" aria-disabled="true"
+                                class="px-0 py-1 border-0 list-group-item disabled"><a
+                                  class="d-flex justify-content-between align-items-center text-inherit text-decoration-none"
+                                  href="#">
+                                  <div class="text-truncate "><span
+                                      class="icon-shape bg-light text-muted icon-sm rounded-circle me-2"><i
+                                        class="fa fa-lock fs-6"></i> </span><span class="acc-text">Introduction</span>
+                                  </div>
+                                  <div class="text-truncate"><span class="acc-text">1m 41s</span></div>
+                                </a></li>
+                              <li tabindex="-1" aria-disabled="true"
+                                class="px-0 py-1 border-0 list-group-item disabled"><a
+                                  class="d-flex justify-content-between align-items-center text-inherit text-decoration-none"
+                                  href="#">
+                                  <div class="text-truncate "><span
+                                      class="icon-shape bg-light text-muted icon-sm rounded-circle me-2"><i
+                                        class="fa fa-lock fs-6"></i> </span><span class="acc-text">Working with
+                                      JavaScript
+                                      Files</span></div>
+                                  <div class="text-truncate"><span class="acc-text">6m 18s</span></div>
+                                </a></li>
+                              <li tabindex="-1" aria-disabled="true"
+                                class="px-0 py-1 border-0 list-group-item disabled"><a
+                                  class="d-flex justify-content-between align-items-center text-inherit text-decoration-none"
+                                  href="#">
+                                  <div class="text-truncate "><span
+                                      class="icon-shape bg-light text-muted icon-sm rounded-circle me-2"><i
+                                        class="fa fa-lock fs-6"></i> </span><span class="acc-text">Formatting
+                                      Code</span>
+                                  </div>
+                                  <div class="text-truncate"><span class="acc-text">2m 18s</span></div>
+                                </a></li>
+                              <li tabindex="-1" aria-disabled="true"
+                                class="px-0 py-1 border-0 list-group-item disabled"><a
+                                  class="d-flex justify-content-between align-items-center text-inherit text-decoration-none"
+                                  href="#">
+                                  <div class="text-truncate "><span
+                                      class="icon-shape bg-light text-muted icon-sm rounded-circle me-2"><i
+                                        class="fa fa-lock fs-6"></i> </span><span class="acc-text">Detecting and
+                                      Fixing
+                                      Errors</span></div>
+                                  <div class="text-truncate"><span class="acc-text">3m 14s</span></div>
+                                </a></li>
+                              <li tabindex="-1" aria-disabled="true"
+                                class="px-0 py-1 border-0 list-group-item disabled"><a
+                                  class="d-flex justify-content-between align-items-center text-inherit text-decoration-none"
+                                  href="#">
+                                  <div class="text-truncate "><span
+                                      class="icon-shape bg-light text-muted icon-sm rounded-circle me-2"><i
+                                        class="fa fa-lock fs-6"></i> </span><span class="acc-text">Case
+                                      Sensitivity</span>
+                                  </div>
+                                  <div class="text-truncate"><span class="acc-text">1m 48s</span></div>
+                                </a></li>
+                              <li tabindex="-1" aria-disabled="true"
+                                class="px-0 py-1 border-0 list-group-item disabled"><a
+                                  class="d-flex justify-content-between align-items-center text-inherit text-decoration-none"
+                                  href="#">
+                                  <div class="text-truncate "><span
+                                      class="icon-shape bg-light text-muted icon-sm rounded-circle me-2"><i
+                                        class="fa fa-lock fs-6"></i> </span><span class="acc-text">Commenting
+                                      Code</span>
+                                  </div>
+                                  <div class="text-truncate"><span class="acc-text">2m 24s</span></div>
+                                </a></li>
+                              <li tabindex="-1" aria-disabled="true"
+                                class="px-0 py-1 border-0 list-group-item disabled"><a
+                                  class="d-flex justify-content-between align-items-center text-inherit text-decoration-none"
+                                  href="#">
+                                  <div class="text-truncate "><span
+                                      class="icon-shape bg-light text-muted icon-sm rounded-circle me-2"><i
+                                        class="fa fa-lock fs-6"></i> </span><span class="acc-text">Summary</span>
+                                  </div>
+                                  <div class="text-truncate"><span class="acc-text">2m 14s</span></div>
+                                </a></li>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Program Flow -->
+                        <div class="px-0 accordian-item list-group-item">
+                          <a aria-expanded="false"
+                            class="d-flex align-items-center text-inherit text-decoration-none heading3 mb-0 collapsed"
+                            data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true"
+                            aria-controls="collapseFour" href="#">
+                            <div class="me-auto">Program Flow</div><span class="chevron-arrow ms-4"><i
+                                class="fa fa-chevron-down fs-6"></i></span>
+                          </a>
+                          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                            data-bs-parent="#accordionExample">
+                            <div class="py-4  ">
+                              <li tabindex="-1" aria-disabled="true"
+                                class="px-0 py-1 border-0 list-group-item disabled"><a
+                                  class="d-flex justify-content-between align-items-center text-inherit text-decoration-none"
+                                  href="#">
+                                  <div class="text-truncate "><span
+                                      class="icon-shape bg-light text-muted icon-sm rounded-circle me-2"><i
+                                        class="fa fa-lock fs-6"></i> </span><span class="acc-text">Introduction</span>
+                                  </div>
+                                  <div class="text-truncate"><span class="acc-text">1m 41s</span></div>
+                                </a></li>
+
+                              <li tabindex="-1" aria-disabled="true"
+                                class="px-0 py-1 border-0 list-group-item disabled"><a
+                                  class="d-flex justify-content-between align-items-center text-inherit text-decoration-none"
+                                  href="#">
+                                  <div class="text-truncate "><span
+                                      class="icon-shape bg-light text-muted icon-sm rounded-circle me-2"><i
+                                        class="fa fa-lock fs-6"></i> </span><span class="acc-text">Working with
+                                      JavaScript
+                                      Files</span></div>
+                                  <div class="text-truncate"><span class="acc-text">6m 18s</span></div>
+                                </a></li>
+                              <li tabindex="-1" aria-disabled="true"
+                                class="px-0 py-1 border-0 list-group-item disabled"><a
+                                  class="d-flex justify-content-between align-items-center text-inherit text-decoration-none"
+                                  href="#">
+                                  <div class="text-truncate "><span
+                                      class="icon-shape bg-light text-muted icon-sm rounded-circle me-2"><i
+                                        class="fa fa-lock fs-6"></i> </span><span class="acc-text">Formatting
+                                      Code</span>
+                                  </div>
+                                  <div class="text-truncate"><span class="acc-text">2m 18s</span></div>
+                                </a></li>
+                              <li tabindex="-1" aria-disabled="true"
+                                class="px-0 py-1 border-0 list-group-item disabled"><a
+                                  class="d-flex justify-content-between align-items-center text-inherit text-decoration-none"
+                                  href="#">
+                                  <div class="text-truncate "><span
+                                      class="icon-shape bg-light text-muted icon-sm rounded-circle me-2"><i
+                                        class="fa fa-lock fs-6"></i> </span><span class="acc-text">Detecting and
+                                      Fixing
+                                      Errors</span></div>
+                                  <div class="text-truncate"><span class="acc-text">3m 14s</span></div>
+                                </a></li>
+                              <li tabindex="-1" aria-disabled="true"
+                                class="px-0 py-1 border-0 list-group-item disabled"><a
+                                  class="d-flex justify-content-between align-items-center text-inherit text-decoration-none"
+                                  href="#">
+                                  <div class="text-truncate "><span
+                                      class="icon-shape bg-light text-muted icon-sm rounded-circle me-2"><i
+                                        class="fa fa-lock fs-6"></i> </span><span class="acc-text">Case
+                                      Sensitivity</span>
+                                  </div>
+                                  <div class="text-truncate"><span class="acc-text">1m 48s</span></div>
+                                </a></li>
+                              <li tabindex="-1" aria-disabled="true"
+                                class="px-0 py-1 border-0 list-group-item disabled"><a
+                                  class="d-flex justify-content-between align-items-center text-inherit text-decoration-none"
+                                  href="#">
+                                  <div class="text-truncate "><span
+                                      class="icon-shape bg-light text-muted icon-sm rounded-circle me-2"><i
+                                        class="fa fa-lock fs-6"></i> </span><span class="acc-text">Commenting
+                                      Code</span>
+                                  </div>
+                                  <div class="text-truncate"><span class="acc-text">2m 24s</span></div>
+                                </a></li>
+                              <li tabindex="-1" aria-disabled="true"
+                                class="px-0 py-1 border-0 list-group-item disabled"><a
+                                  class="d-flex justify-content-between align-items-center text-inherit text-decoration-none"
+                                  href="#">
+                                  <div class="text-truncate "><span
+                                      class="icon-shape bg-light text-muted icon-sm rounded-circle me-2"><i
+                                        class="fa fa-lock fs-6"></i> </span><span class="acc-text">Summary</span>
+                                  </div>
+                                  <div class="text-truncate"><span class="acc-text">2m 14s</span></div>
+                                </a></li>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Summary -->
+                        <div class="px-0 py-2 accordian-item ">
+                          <a aria-expanded="false"
+                            class="d-flex align-items-center text-inherit text-decoration-none heading3 mb-0 collapsed"
+                            data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true"
+                            aria-controls="collapseFive" href="#">
+                            <div class="me-auto">Summary</div><span class="chevron-arrow ms-4"><i
+                                class="fa fa-chevron-down fs-6"></i></span>
+                          </a>
+                          <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                            data-bs-parent="#accordionExample">
+                            <div class="border-0 px-0 py-4 ">
+                              <p> ipsum dolor sit amet
+                                consectetur adipisicing elit.
+                                Repudiandae esse velit eos sunt ab inventore est tenetur blanditiis?
+                                Voluptas eius molestiae ad itaque tempora nobis minima eveniet aperiam molestias,
+                                maiores natus expedita dolores ea non possimus magnam corrupt i quas rem unde quo
+                                enim porro culpa! Quaerat veritatis veniam corrupti iusto.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Description Menu -->
+                    <div role="tabpanel" id="description" aria-labelledby="description" class="fade pb-4 p-4 tab-pane">
+                      <div class="mb-4">
+                        <h5 class="mb-2">Course Descriptions</h5>
+                        <p>If you’re learning to program for the first time, or if you’re coming from a different
+                          language,
+                          this course, JavaScript: Getting Started, will give you the basics for coding in JavaScript.
+                          First,
+                          you'll discover the types of applications that can be built with JavaScript, and the platforms
+                          they’ll run on.</p>
+                        <p>Next, you’ll explore the basics of the language, giving plenty of examples. Lastly, you’ll
+                          put your
+                          JavaScript knowledge to work and modify a modern, responsive web page. When you’re finished
+                          with
+                          this course, you’ll have the skills and knowledge in JavaScript to create simple programs,
+                          create
+                          simple web applications, and modify web pages.</p>
+                      </div>
+                      <h6 class="mb-3">What you’ll learn</h6>
+                      <div class="mb-3 row">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                          <div class="list-unstyled list-unstyled-flush">
+                            <div class="d-flex mb-2  "><i
+                                class="fa fa-check-circle text-success me-2 mt-2"></i><span>Recognize the importance of
+                                understanding your objectives when addressing an audience.</span></div>
+                            <div class="d-flex mb-2  "><i
+                                class="fa fa-check-circle text-success me-2 mt-2"></i><span>Identify
+                                the fundaments of
+                                composing a successful close.</span></div>
+                            <div class="d-flex mb-2  "><i
+                                class="fa fa-check-circle text-success me-2 mt-2"></i><span>Explore
+                                how to connect with your audience through crafting compelling stories.</span></div>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                          <div class="list-unstyled list-unstyled-flush">
+                            <div class="d-flex mb-2  "><i class="fa fa-check-circle text-success me-2 mt-1"></i>
+                              <span>Examine ways to connect with your audience by personalizing your content.</span>
+                            </div>
+                            <div class="d-flex mb-2  "><i
+                                class="fa fa-check-circle text-success me-2 mt-1"></i><span>Break
+                                down the best ways to exude executive presence.</span></div>
+                            <div class="d-flex mb-2  "><i
+                                class="fa fa-check-circle text-success me-2 mt-1"></i><span>Explore
+                                how to communicate the unknown in an impromptu communication.</span></div>
+                          </div>
+                        </div>
+                      </div>
+                      <p>Maecenas viverra condimentum nulla molestie condimentum. Nunc ex libero, feugiat quis lectus
+                        vel,
+                        ornare euismod ligula. Aenean sit amet arcu nulla.</p>
+                      <p>Duis facilisis ex a urna blandit ultricies. Nullam sagittis ligula non eros semper, nec mattis
+                        odio
+                        ullamcorper. Phasellus feugiat sit amet leo eget consectetur.</p>
+                    </div>
+                    <!-- Reviews Menu -->
+                    <div role="tabpanel" id="reviews" aria-labelledby="reviews-tab" class="fade pb-4 p-4 tab-pane">
+                      <div class="mb-3">
+                        <h5 class="mb-4">How students rated this courses</h5>
+                        <div class="align-items-center row">
+                          <div class="text-center col-auto">
+                            <h3 class="display-4 fw-bold">4.5</h3>
+                            <span class="text-warning">
+                              <span class="fa fa-star "></span>
+                              <span class="fa fa-star"></span>
+                              <span class="fa fa-star"></span>
+                              <span class="fa fa-star"></span>
+                              <span class="fa fa-star-half-full"></span>
+
+                            </span>
+                            <p class="mb-0 fs-6">(Based on 27 reviews)</p>
+                          </div>
+                          <div class="pt-3 order-3 order-md-2 col">
+                            <div class="mb-3 progress" style="height: 6px;">
+                              <div role="progressbar" class="progress-bar bg-warning" aria-valuenow="50"
+                                aria-valuemin="0" aria-valuemax="100" style="width: 50%;"></div>
+                            </div>
+                            <div class="mb-3 progress" style="height: 6px;">
+                              <div role="progressbar" class="progress-bar bg-warning" aria-valuenow="36"
+                                aria-valuemin="0" aria-valuemax="100" style="width: 36%;"></div>
+                            </div>
+                            <div class="mb-3 progress" style="height: 6px;">
+                              <div role="progressbar" class="progress-bar bg-warning" aria-valuenow="9"
+                                aria-valuemin="0" aria-valuemax="100" style="width: 9%;"></div>
+                            </div>
+                            <div class="mb-3 progress" style="height: 6px;">
+                              <div role="progressbar" class="progress-bar bg-warning" aria-valuenow="3"
+                                aria-valuemin="0" aria-valuemax="100" style="width: 3%;"></div>
+                            </div>
+                            <div class="mb-3 progress" style="height: 6px;">
+                              <div role="progressbar" class="progress-bar bg-warning" aria-valuenow="2"
+                                aria-valuemin="0" aria-valuemax="100" style="width: 2%;"></div>
+                            </div>
+                          </div>
+                          <div class="order-2 order-md-3 col-md-auto col-6">
+                            <div>
+                              <span class="text-warning">
+                                <span class="fa fa-star "></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                              </span>
+                              <span class="ms-4">50%</span>
+                            </div>
+
+                            <div>
+                              <span class="text-warning">
+                                <span class="fa fa-star "></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star-o"></span>
+                              </span>
+                              <span class="ms-4">36%</span>
+                            </div>
+                            <div>
+                              <span class="text-warning">
+                                <span class="fa fa-star "></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star-o"></span>
+                                <span class="fa fa-star-o"></span>
+                              </span>
+                              <span class="ms-4">9%</span>
+                            </div>
+                            <div>
+                              <span class="text-warning">
+                                <span class="fa fa-star "></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star-o"></span>
+                                <span class="fa fa-star-o"></span>
+                                <span class="fa fa-star-o"></span>
+                              </span><span class="ms-4">3%</span>
+                            </div>
+                            <div> <span class="text-warning">
+                                <span class="fa fa-star "></span>
+                                <span class="fa fa-star-o"></span>
+                                <span class="fa fa-star-o"></span>
+                                <span class="fa fa-star-o"></span>
+                                <span class="fa fa-star-o"></span>
+                              </span>
+
+                              <span class="ms-4">2%</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <hr class="my-5">
+                      <div class="mb-3">
+                        <div class="d-lg-flex align-items-center justify-content-between mb-5">
+                          <div class="mb-3 mb-lg-0">
+                            <h3 class="mb-0">Reviews</h3>
+                          </div>
+                          <div>
+                            <form class="form-inline">
+                              <div class="d-flex align-items-center me-2"><span class="position-absolute ps-3"><i
+                                    class="fe fe-search"></i></span><input placeholder="Search Review" type="search"
+                                  id="formBasicEmail" class=" ps-6 form-control"></div>
+                            </form>
+                          </div>
+                        </div>
+                        <div class="d-flex border-bottom pb-4 mb-4"><img src="Assets/Images/p3.jpg" alt=""
+                            class="rounded-circle avatar-lg" width="56px" height="56px">
+                          <div class=" ms-3">
+                            <h6 class="mb-1">Max Hawkins<span class="ms-1 fs-6 text-muted">2 Days ago</span></h6>
+                            <span class="text-warning">
+                              <span class="fa fa-star "></span>
+                              <span class="fa fa-star"></span>
+                              <span class="fa fa-star"></span>
+                              <span class="fa fa-star"></span>
+                              <span class="fa fa-star"></span>
+                            </span>
+                            <div>
+                              <p>Lectures were at a really good pace and I never felt lost. The
+                                instructor was well informed and allowed me to learn and navigate
+                                Figma easily.</p>
+                            </div>
+                            <div class="d-lg-flex">
+                              <p class="mb-0">Was this review helpful?</p><a class="btn btn-xs btn-primary ms-lg-3"
+                                href="#">Yes</a><a class="btn btn-xs btn-outline-white ms-1" href="#">No</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="d-flex border-bottom pb-4 mb-4"><img src="Assets/Images/p7.jpg" alt=""
+                            class="rounded-circle avatar-lg" width="56px" height="56px">
+                          <div class=" ms-3">
+                            <h6 class="mb-1">Max Hawkins<span class="ms-1 fs-6 text-muted">2 Days ago</span></h6>
+                            <span class="text-warning">
+                              <span class="fa fa-star "></span>
+                              <span class="fa fa-star"></span>
+                              <span class="fa fa-star"></span>
+                              <span class="fa fa-star"></span>
+                              <span class="fa fa-star"></span>
+                            </span>
+                            <div>
+                              <p>Lectures were at a really good pace and I never felt lost. The
+                                instructor was well informed and allowed me to learn and navigate
+                                Figma easily.</p>
+                            </div>
+                            <div class="d-lg-flex">
+                              <p class="mb-0">Was this review helpful?</p><a class="btn btn-xs btn-primary ms-lg-3"
+                                href="#">Yes</a><a class="btn btn-xs btn-outline-white ms-1" href="#">No</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Transcript Menu -->
+                    <div role="tabpanel" id="transcript" aria-labelledby="transcript-tab"
+                      class="fade pb-4 p-4 tab-pane">
+                      <h5 class="mb-3">Transcript from the "Introduction" Lesson</h5>
+                      <div class="mb-4">
+                        <h6>Course Overview <a class="text-primary ms-2" href="#">[00:00:00]</a></h6>
+                        <div>
+                          <p class="mb-0">My name is John Deo and I work as human duct tape at Gatsby,
+                            that means that I do a lot of different things. Everything from dev roll to writing
+                            content to writing code. And I used to work as an architect at IBM. I live in Portland,
+                            Oregon.</p>
+                        </div>
+                      </div>
+                      <div class="mb-4">
+                        <h6>Introduction <a class="text-primary ms-2 h6" href="#">[00:00:16]</a></h6>
+                        <div>
+                          <p>We'll dive into GraphQL, the fundamentals of GraphQL.
+                            We're only gonna use the pieces of it that we need to build in Gatsby.
+                            We're not gonna be doing a deep dive into what GraphQL is or the language specifics.
+                            We're also gonna get into MDX. MDX is a way to write React components in your markdown.</p>
+                        </div>
+                      </div>
+                      <div class="mb-4">
+                        <h6>Why Take This Course? <a class="text-primary ms-2 h6" href="#">[00:00:37]</a></h6>
+                        <div>
+                          <p> We'll dive into GraphQL, the fundamentals of GraphQL.
+                            We're only gonna use the pieces of it that we need to build in Gatsby.
+                            We're not gonna be doing a deep dive into what GraphQL is or the language specifics.
+                            We're also gonna get into MDX. MDX is a way to write React components in your markdown.</p>
+                        </div>
+                      </div>
+                      <div class="mb-4">
+                        <h6>A Look at the Demo Application <a class="text-primary ms-2 h6" href="#">[00:00:54]</a></h6>
+                        <div>
+                          <p>We'll dive into GraphQL, the fundamentals of GraphQL.
+                            We're only gonna use the pieces of it that we need to build in Gatsby.
+                            We're not gonna be doing a deep dive into what GraphQL is or the language specifics.
+                            We're also gonna get into MDX. MDX is a way to write React components in your markdown.</p>
+                          <p>We'll dive into GraphQL, the fundamentals of GraphQL.
+                            We're only gonna use the pieces of it that we need to build in Gatsby.
+                            We're not gonna be doing a deep dive into what GraphQL is or the language specifics.
+                            We're also gonna get into MDX. MDX is a way to write React components in your markdown.</p>
+                        </div>
+                      </div>
+                      <div class="mb-4">
+                        <h6>Summary <a class="text-primary ms-2 h6" href="#">[00:01:31]</a></h6>
+                        <div>
+                          <p> We'll dive into GraphQL, the fundamentals of GraphQL.
+                            We're only gonna use the pieces of it that we need to build in Gatsby.
+                            We're not gonna be doing a deep dive into what GraphQL is or the language specifics.
+                            We're also gonna get into MDX. MDX is a way to write React components in your markdown.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- FAq Menu -->
+                    <div role="tabpanel" id="faq" aria-labelledby="faq-tab" class="fade pb-4 p-4 tab-pane">
+                      <div class="mb-4">
+                        <h6>How this course help me to design layout?</h6>
+                        <div>
+                          <p>My name is Jason Woo and I work as human duct tape at Gatsby,
+                            that means that I do a lot of different things. Everything from dev
+                            roll to writing content to writing code. And I used to work as an architect at IBM.
+                            I live in Portland, Oregon.</p>
+                        </div>
+                      </div>
+                      <div class="mb-4">
+                        <h6>What is important of this course?</h6>
+                        <div>
+                          <p>We'll dive into GraphQL, the fundamentals of GraphQL.
+                            We're only gonna use the pieces of it that we need to build in Gatsby.
+                            We're not gonna be doing a deep dive into what GraphQL is or the language specifics.
+                            We're also gonna get into MDX. MDX is a way to write React components in your markdown.</p>
+                        </div>
+                      </div>
+                      <div class="mb-4">
+                        <h6>Why Take This Course?</h6>
+                        <div>
+                          <p>We'll dive into GraphQL, the fundamentals of GraphQL.
+                            We're only gonna use the pieces of it that we need to build in Gatsby.
+                            We're not gonna be doing a deep dive into what GraphQL is or the language specifics.
+                            We're also gonna get into MDX. MDX is a way to write React components in your markdown.</p>
+                        </div>
+                      </div>
+                      <div class="mb-4">
+                        <h6>Is able to create application after this course?</h6>
+                        <div>
+                          <p>
+                            We'll dive into GraphQL, the fundamentals of GraphQL. We're only gonna use the pieces of it
+                            that we need to build in Gatsby. We're not gonna be doing a deep dive into what GraphQL is
+                            or the language specifics. We're also gonna get into MDX. MDX is a way
+                            to write React components in your markdown.</p>
+                          <p>We'll dive into GraphQL, the fundamentals of GraphQL. We're only gonna use the pieces of it
+                            that we need to build in Gatsby. We're not gonna be doing a deep dive into what GraphQL is
+                            or the language specifics. We're also gonna get into MDX. MDX is a way
+                            to write React components in your markdown.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Right Side Card Starts here -->
+            <div class="mt-lg-n22 col-lg-4 col-md-12 col-sm-12 hovtext ">
+              <div class="mb-3 mb-4 card">
+                <div class="p-1">
+                  <div
+                    class="card-pic d-flex justify-content-center position-relative rounded py-10 border-white border rounded-3 bg-cover">
+                    <a class="popup-youtube icon-shape rounded-circle btn-play icon-xl text-decoration-none" href="#">
+                      <i class="fa fa-play"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="card-detail">
+                  <div class="mb-3"><span class="text-dark fw-bold heading2 me-2">$600</span><del
+                      class="fs-8 text-muted">$750</del></div>
+                  <div class="d-grid"><a class="btn btn-primary mb-2 freebtn " href="#">Start
+                      Free Month</a><a class="btn  freebtn-out" href="#">Get Full
+                      Access</a></div>
+                </div>
+              </div>
+              <div class="mb-4 card">
+                <div class="card-header">
+                  <h6 class="heading3 mb-0">What’s included</h6>
+                </div>
+                <div class="p-0 card-body">
+                  <div class="list-group list-group-flush">
+                    <div class="list-group-item"><i class="fa fa-play-circle align-middle me-2 text-primary"></i>12
+                      hours video</div>
+                    <div class="list-group-item"><i class="fa fa-trophy me-2 align-middle text-success"></i>Certificate
+                    </div>
+                    <div class="list-group-item"><i class="fa fa-calendar align-middle me-2 text-info"></i>12 Article
+                    </div>
+                    <div class="list-group-item"><i
+                        class="fa fa-video-camera align-middle me-2 text-secondary"></i>Watch
+                      Offline</div>
+                    <div class="bg-transparent list-group-item"><i
+                        class="fa fa-clock-o align-middle me-2 text-warning"></i>Lifetime access</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex align-items-center">
+                    <div class="position-relative"><img src="/Assets/Images/p1.jpg" width="80px" alt=""
+                        class="rounded-circle">
+                      <a class="position-absolute mt-2 ms-n3 verified" data-bs-toggle="tooltip" data-placement="top"
+                        title="Verifed" href="#">
+                        <img src="/Assets/Images/checked-mark.002a8cea8655e2488125a9486bf876c4.svg" alt="" height="30"
+                          width="30" class="">
+                      </a>
+                    </div>
+                    <div class="ms-4">
+                      <h4 class="mb-0 heading3">Jenny Wilson</h4>
+                      <p class="mb-1 fs-7">Front-end Developer, Designer</p><span class="fs-7"><span
+                          class="text-warning">4.5</span><span class="mdi mdi-star text-warning me-2"></span>Instructor
+                        Rating</span>
+                    </div>
+                  </div>
+                  <div class="border-top mt-3 border-bottom mb-3 g-0 row">
+                    <div class="col">
+                      <div class="pe-1 ps-2 py-3">
+                        <h5 class="mb-0 heading4">11,604</h5><span>Students</span>
+                      </div>
+                    </div>
+                    <div class="border-start col">
+                      <div class="pe-1 ps-3 py-3">
+                        <h5 class="mb-0 heading4">32</h5><span>Courses</span>
+                      </div>
+                    </div>
+                    <div class="border-start col">
+                      <div class="pe-1  ps-3 py-3">
+                        <h5 class="mb-0 heading4">12,230</h5><span>Reviews</span>
+                      </div>
+                    </div>
+                  </div>
+                  <p>I am an Innovation designer focussing on UX/UI based in Berlin. As a creative resident at Figma
+                    explored the city of the future and how new technologies.</p><a class="btn btn-outline-white btn-sm"
+                    href="#">View Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Related Courses  -->
+          <div class="pt-12 pb-3">
+            <div class="d-md-flex align-items-center mb-4 row">
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <h2 class="mb-0 heading2">Related Courses</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                <div class="card-deck hover-zoom pb-5">
+                  <a href="./courses.html">
+                    <div class="card">
+                      <img class="img-fluid card-img-top rounded-top-md" src="./Assets/Images/g1.jpg" alt="graph">
+                      <div class="card-body">
+                        <div class="mb-2 text-truncate">
+                          <a href="./courses.html" class="card-title text-decoration-none">GraphQL:
+                            introduction to graphQL for
+                            beginners</a>
+                        </div>
+                        <ul class="list-inline">
+                          <li class="list-inline-item">
+                            <i class="fa fa-clock-o"></i>
+                            <span>2h 40m</span>
+                          </li>
+                          <li class="list-inline-item">
+                            <img src="./Assets/Images/advance.PNG" alt="logo">
+                            Advance
+                          </li>
+                          <li class="list-inline-item">
+                            <img src="./Assets/Images/rating 2.png" alt="logo">
+                          </li>
+                        </ul>
+                        <div class="card-text">
+                          <span><strong>$500</strong></span>
+                          <del class=" disabled text-muted"> $600</del>
+
+                        </div>
+                      </div>
+                      <div class="class-footer border-top">
+                        <div class="align-items-center g-0 row">
+                          <div class="col-auto col">
+                            <img src="/Assets/Images/p2.jpg" alt="" class="avatar rounded-circle" id="tutor">
+                          </div>
+                          <div class="col ms-2 col">
+                            <span>Brooklyn Simmons</span>
+                          </div>
+                          <div class="col-auto col">
+                            <a class="text-muted bookmark" href="/">
+                              <i class="fa fa-bookmark-o"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                <div class="card-deck pb-5">
+                  <a href="./courses.html">
+                    <div class="card">
+                      <img class="img-fluid card-img-top rounded-top-md" src="./Assets/Images/js.jpg" alt="graph">
+                      <div class="card-body">
+                        <div class="mb-2 text-truncate">
+                          <a href="./courses.html" class="card-title text-decoration-none">A complete
+                            Beginner guide's to javaScript</a>
+                        </div>
+                        <ul class="list-inline">
+                          <li class="list-inline-item">
+                            <i class="fa fa-clock-o"></i>
+                            <span>4h 10m</span>
+                          </li>
+                          <li class="list-inline-item">
+                            <img src="./Assets/Images/advance.PNG" alt="logo">
+                            Advance
+                          </li>
+                          <li class="list-inline-item">
+                            <img src="./Assets/Images/rating 2.png" alt="logo">
+                          </li>
+                        </ul>
+                        <div class="card-text">
+                          <span><strong>$700</strong></span>
+                          <del class=" disabled text-muted"> $850</del>
+                        </div>
+                      </div>
+
+                      <div class="class-footer border-top">
+                        <div class="align-items-center g-0 row">
+                          <div class="col-auto col">
+                            <img src="/Assets/Images/p6.jpg" alt="" class="avatar rounded-circle" id="tutor">
+                          </div>
+                          <div class="col ms-2 col">
+                            <span>Jenny Wilson</span>
+                          </div>
+                          <div class="col-auto col">
+                            <a class="text-muted bookmark" href="/">
+                              <i class="fa fa-bookmark-o"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                <div class="card-deck pb-5">
+                  <a href="./courses.html">
+                    <div class="card">
+                      <img class="img-fluid card-img-top rounded-top-md" src="./Assets/Images/njs.jpg" alt="graph">
+                      <div class="card-body">
+                        <div class="mb-2 text-truncate">
+                          <a href="./courses.html" class="card-title text-decoration-none">Beginning
+                            Node.js,Express & MongoDB Development</a>
+                        </div>
+                        <ul class="list-inline">
+                          <li class="list-inline-item">
+                            <i class="fa fa-clock-o"></i>
+                            <span>2h 00m</span>
+                          </li>
+                          <li class="list-inline-item">
+                            <img src="./Assets/Images/inter.PNG" alt="logo">
+                            Intermediate
+                          </li>
+                          <li class="list-inline-item">
+                            <img src="./Assets/Images/rating.png" alt="logo">
+                          </li>
+                        </ul>
+                        <div class="card-text">
+                          <span><strong>$800</strong></span>
+                          <del class=" disabled text-muted"> $950</del>
+                        </div>
+                      </div>
+
+                      <div class="class-footer border-top">
+
+                        <div class="align-items-center g-0 row">
+                          <div class="col-auto col">
+                            <img src="/Assets/Images/p4.jpg" alt="" class="avatar rounded-circle" id="tutor">
+                          </div>
+                          <div class="col ms-2 col">
+                            <span>Sina Ray</span>
+                          </div>
+                          <div class="col-auto col">
+                            <a class="text-muted bookmark" href="/">
+                              <i class="fa fa-bookmark-o"></i>
+                            </a>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                <div class="card-deck pb-5">
+                  <a href="./courses.html">
+                    <div class="card">
+                      <img class="img-fluid card-img-top rounded-top-md" src="./Assets/Images/la.jpg" alt="graph">
+                      <div class="card-body">
+                        <div class="mb-2 text-truncate">
+                          <a href="./courses.html" class="card-title text-decoration-none">Laravel: The
+                            ultimate Beginner's Guide to Learn</a>
+                        </div>
+                        <ul class="list-inline">
+                          <li class="list-inline-item">
+                            <i class="fa fa-clock-o"></i>
+                            <span>1h 00m</span>
+                          </li>
+                          <li class="list-inline-item">
+                            <img src="./Assets/Images/beg.PNG" alt="logo">
+                            Beginner
+                          </li>
+                          <li class="list-inline-item">
+                            <img src="./Assets/Images/rating 4.png" alt="logo">
+                          </li>
+                        </ul>
+                        <div class="card-text">
+                          <span><strong>$170</strong></span>
+                          <del class=" disabled text-muted"> $220</del>
+                        </div>
+                      </div>
+                      <div class="class-footer border-top">
+
+                        <div class="align-items-center g-0 row">
+                          <div class="col-auto col">
+                            <img src="/Assets/Images/p3.jpg" alt="" class="avatar rounded-circle" id="tutor">
+                          </div>
+                          <div class="col ms-2 col">
+                            <span>Sobo Rikhan</span>
+                          </div>
+                          <div class="col-auto col">
+                            <a class="text-muted bookmark" href="/">
+                              <i class="fa fa-bookmark-o"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--FOOTER-->
+      <div class="footer bg-transparent">
+        <div class="container">
+          <div class="align-items-center g-0 border-top py-2 row">
+            <div class="text-center text-md-start col-md-6 col-sm-12">
+              <span>© 2022 Geeks. All Rights Reserved.</span>
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <nav class="nav nav-footer justify-content-center justify-content-md-end">
+                <a class="nav-link active ps-3 pe-3" href="#">Privacy</a>
+                <a class="nav-link ps-3 pe-3" href="#">Terms </a>
+                <a class="nav-link ps-3 pe-3" href="#">Feedback</a>
+                <a class="nav-link ps-3 pe-3" href="#">Support</a>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Bootstrap JavaScript plugin Bundles -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
